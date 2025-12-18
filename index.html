@@ -118,126 +118,171 @@
           <h2>커리큘럼</h2>
           <p>10주 완성형 실무 커리큘럼</p>
         </div>
-
-        <div class="timeline">
-          <!-- Week 1 -->
-          <div class="tl-row">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <div class="tl-label">1주차</div>
+    
+        <div class="curr-timeline">
+    
+          <!-- 1주차 -->
+          <article class="curr-item">
+            <div class="curr-rail">
+              <span class="curr-check" aria-hidden="true">✓</span>
+              <span class="curr-line"></span>
             </div>
-            <div class="tl-card">
-              <h3>Python 프로그래밍</h3>
-              <p class="muted">프로그래밍 기초 및 활용 중심 실습</p>
+    
+            <div class="curr-content">
+              <span class="curr-week">1주차</span>
+              <h3 class="curr-title">Python 프로그래밍</h3>
+              <p class="curr-desc">프로그래밍 기초 및 활용 중심 실습</p>
             </div>
-          </div>
-
-          <!-- Week 2-5 -->
-          <div class="tl-row">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <div class="tl-label">2–5주차</div>
+          </article>
+    
+          <!-- 2-5주차 -->
+          <article class="curr-item">
+            <div class="curr-rail">
+              <span class="curr-check" aria-hidden="true">✓</span>
+              <span class="curr-line"></span>
             </div>
-            <div class="tl-card">
-              <div class="module-title">
-                <span class="pill">Module 1</span>
-                <h3>BigData 문제해결</h3>
+    
+            <div class="curr-content">
+              <span class="curr-week">2-5주차</span>
+    
+              <h3 class="curr-title">BigData 문제해결</h3>
+              <p class="curr-desc">통계/수집/전처리 + 분석절차 + 문제해결 방법론</p>
+    
+              <div class="curr-module">
+                <span class="curr-module-pill">Module I</span>
+                <div class="curr-module-body">
+                  <div class="curr-module-name">BigData</div>
+                  <div class="curr-module-sub">
+                    통계 이해, 데이터 핸들링/전처리, 분석 계획 수립, 팀 과제 수행 및 발표
+                  </div>
+                </div>
               </div>
-              <p class="muted">통계/수집/전처리 → 분석 → 문제해결 방법론</p>
-
-              <div class="table-wrap">
-                <table class="table">
+    
+              <!-- ✅ 옵션 A: 표를 코드로 구현(추천) -->
+              <div class="curr-tableWrap">
+                <table class="curr-table">
                   <thead>
                     <tr>
-                      <th style="width: 22%;">과정명</th>
-                      <th style="width: 12%;">강의</th>
+                      <th>강좌명</th>
+                      <th class="center">강의 일수</th>
                       <th>내용</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>통계 &amp; 분석 기초</td>
-                      <td>3일</td>
-                      <td>기초통계, 확률분포, 가설검정, ANOVA, 상관/회귀</td>
+                      <td>포스코 소개 및 통계 이해</td>
+                      <td class="center">3일</td>
+                      <td>포스코 기업시민 활동, Smart Factory 추진현황 / 기초통계, 확률분포, 가설검정, ANOVA, 상관/회귀</td>
                     </tr>
                     <tr>
-                      <td>BigData 분석</td>
-                      <td>3일</td>
-                      <td>EDA, 시각화, 분석설계, 데이터 분석 사례</td>
+                      <td>BigData 분석(I)</td>
+                      <td class="center">3일</td>
+                      <td>빅데이터 분석 개요, 분석 절차 / Python 데이터 핸들링 및 텍스트 분석</td>
                     </tr>
                     <tr>
-                      <td>데이터 수집/전처리</td>
-                      <td>6일</td>
-                      <td>크롤링, 정제, 결측/이상치 처리, 파이프라인</td>
+                      <td>BigData 분석(II)</td>
+                      <td class="center">6일</td>
+                      <td>데이터 준비 및 분석계획 수립 / 데이터 분석 및 결과 해석(예측/분류/군집/연관규칙 등)</td>
                     </tr>
                     <tr>
                       <td>BigData 과제수행</td>
-                      <td>8일</td>
-                      <td>문제정의 → 분석 → 인사이트 도출 → 발표</td>
+                      <td class="center">8일</td>
+                      <td>팀별 과제 선정 및 수행 / 결과정리 및 과제발표</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-            </div>
-          </div>
-
-          <!-- Week 6-10 -->
-          <div class="tl-row">
-            <div class="tl-left">
-              <div class="tl-dot"></div>
-              <div class="tl-label">6–10주차</div>
-            </div>
-            <div class="tl-card">
-              <div class="module-title">
-                <span class="pill">Module 2</span>
-                <h3>AI 심화 및 구현</h3>
+    
+              <!-- ✅ 옵션 B: 표 이미지를 쓰고 싶으면 이 블록 사용 (A 대신) -->
+              <!--
+              <div class="curr-tableImg">
+                <img src="./assets/module1-table.png" alt="Module 1 커리큘럼 표" />
               </div>
-              <p class="muted">ML/DL, CV/NLP, 생성형 AI, 실무형 팀 프로젝트</p>
-
-              <div class="table-wrap">
-                <table class="table">
+              -->
+            </div>
+          </article>
+    
+          <!-- 6-10주차 -->
+          <article class="curr-item">
+            <div class="curr-rail">
+              <span class="curr-check" aria-hidden="true">✓</span>
+              <span class="curr-line is-last"></span>
+            </div>
+    
+            <div class="curr-content">
+              <span class="curr-week">6-10주차</span>
+    
+              <h3 class="curr-title">AI 심화 및 구현</h3>
+              <p class="curr-desc">딥러닝 심화 + 컴퓨터 비전/자연어처리 등 실무 주제 과제</p>
+    
+              <div class="curr-module">
+                <span class="curr-module-pill">Module II</span>
+                <div class="curr-module-body">
+                  <div class="curr-module-name">AI</div>
+                  <div class="curr-module-sub">
+                    알고리즘 기초, ML/DL, 생성모델 이해, CV, NLP, AI 과제 수행
+                  </div>
+                </div>
+              </div>
+    
+              <!-- ✅ 옵션 A: 코드 표 -->
+              <div class="curr-tableWrap">
+                <table class="curr-table">
                   <thead>
                     <tr>
-                      <th style="width: 22%;">과정명</th>
-                      <th style="width: 12%;">강의</th>
+                      <th>강좌명</th>
+                      <th class="center">강의 일수</th>
                       <th>내용</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr>
-                      <td>알고리즘/ML 기초</td>
-                      <td>3일</td>
-                      <td>지도/비지도 학습, 모델 평가, 피처 엔지니어링</td>
+                      <td>AIoT</td>
+                      <td class="center">4일</td>
+                      <td>IoT 시스템 설계 및 구현(Arduino Wokwi simulator 및 Raspberry Pi)</td>
                     </tr>
                     <tr>
-                      <td>딥러닝</td>
-                      <td>5일</td>
-                      <td>CNN/RNN/Transformer 개요 및 실습</td>
+                      <td>알고리즘</td>
+                      <td class="center">3일</td>
+                      <td>알고리즘 기초 및 소프트웨어 설계 / 자료구조, 정렬, 탐색</td>
+                    </tr>
+                    <tr>
+                      <td>머신러닝/딥러닝</td>
+                      <td class="center">5일</td>
+                      <td>Feedforward NN, CNN, RNN 모델 및 학습 / 생성모델(GAN) 이해</td>
                     </tr>
                     <tr>
                       <td>컴퓨터 비전</td>
-                      <td>5일</td>
-                      <td>이미지 분류/탐지, 전이학습, 실전 파이프라인</td>
+                      <td class="center">5일</td>
+                      <td>영상이론과 특징점 정합 / 컴퓨터 비전 기본 개념, 이미지 분석 활용</td>
                     </tr>
                     <tr>
-                      <td>NLP/생성형 AI</td>
-                      <td>4일</td>
-                      <td>텍스트 처리, 임베딩, 프롬프트, RAG 기초</td>
+                      <td>자연어처리</td>
+                      <td class="center">4일</td>
+                      <td>TextMining, Search Engine 등 / 임베딩, 프롬프트, RAG 기초</td>
                     </tr>
                     <tr>
-                      <td>AI 프로젝트</td>
-                      <td>6일</td>
-                      <td>주제선정 → 구현 → 결과발표 → 포트폴리오 정리</td>
+                      <td>AI 과제수행</td>
+                      <td class="center">6일</td>
+                      <td>주제 발굴 및 구현 / 실제 AI 모델 구현 및 발표</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
+    
+              <!-- ✅ 옵션 B: 표 이미지 -->
+              <!--
+              <div class="curr-tableImg">
+                <img src="./assets/module2-table.png" alt="Module 2 커리큘럼 표" />
+              </div>
+              -->
             </div>
-          </div>
-
+          </article>
+    
         </div>
       </div>
     </section>
+
 
     <!-- Eligibility / Apply -->
     <section class="section" id="apply">
