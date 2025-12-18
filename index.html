@@ -52,9 +52,15 @@
 
   <!-- Hero -->
   <section class="hero">
-    <div class="hero-bg" aria-hidden="true"></div>
+    <!-- ✅ hero-bg(단일) → hero-slider(복수)로 교체 -->
+    <div class="hero-slider" aria-hidden="true">
+      <div class="hero-slide is-active" style="background-image:url('./assets/hero.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./assets/hero2.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./assets/hero3.jpg')"></div>
+    </div>
+  
     <div class="hero-overlay" aria-hidden="true"></div>
-
+  
     <div class="container hero-inner">
       <div class="hero-copy">
         <h1>
@@ -65,20 +71,22 @@
           스마트 시대 핵심기술인 AI · BigData 전문 교육으로 취업 경쟁력을 확보합니다.<br />
           이론 → 실습 → 팀 프로젝트까지 한 흐름으로 설계된 커리큘럼!
         </p>
-
+  
         <div class="hero-cta">
           <a class="btn btn-primary" href="#apply">지금 지원하기</a>
           <a class="btn btn-outline" href="#curriculum">커리큘럼 보기</a>
         </div>
-
+  
+        <!-- dots는 그대로 사용 -->
         <div class="hero-dots" aria-label="슬라이드 인디케이터">
-          <button class="dot is-active" aria-label="슬라이드 1"></button>
-          <button class="dot" aria-label="슬라이드 2"></button>
-          <button class="dot" aria-label="슬라이드 3"></button>
+          <button class="dot is-active" type="button" aria-label="슬라이드 1"></button>
+          <button class="dot" type="button" aria-label="슬라이드 2"></button>
+          <button class="dot" type="button" aria-label="슬라이드 3"></button>
         </div>
       </div>
     </div>
   </section>
+
 
   <main>
     <!-- Program Key Points -->
