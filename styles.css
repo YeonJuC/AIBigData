@@ -315,11 +315,29 @@ button{ font: inherit; }
   gap: 18px;
 }
 .tl-row{
-  display:grid;
-  grid-template-columns: 140px 1fr;
-  gap: 14px;
-  align-items: start;
+  display: grid;
+  grid-template-columns: 120px 1fr; /* 왼쪽 타임라인 / 오른쪽 내용 */
+  gap: 16px;
+  align-items: flex-start;
 }
+
+.tl-content{
+  padding-top: 6px;
+}
+
+.tl-title{
+  margin: 0 0 6px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.tl-desc{
+  margin: 0;
+  color: #64748b;
+  font-size: 14px;
+  font-weight: 500;
+}
+
 .tl-left{
   position: relative;
   padding-left: 26px;
@@ -360,13 +378,6 @@ button{ font: inherit; }
   width: fit-content;
   box-shadow: var(--shadow2);
 }
-
-.h3{
-  margin: 0 0 6px;
-  font-size: 17px;
-  color: #0F172A;
-}
-.muted{ color: var(--muted); font-weight: 500; margin: 0; }
 
 .module-title{
   display:flex;
