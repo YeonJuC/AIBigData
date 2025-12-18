@@ -322,15 +322,15 @@ button{ font: inherit; }
   position: absolute;
   top: 10px;
   bottom: 10px;
-  left: 20px;
+  left: 22px;
   width: 2px;
-  border-left: 2px dotted rgba(47,107,255,.45);
+  border-left: 2px dotted rgba(47,107,255,.35);
 }
 
 .tl-row{
   display: grid;
   grid-template-columns: 40px 1fr;
-  column-gap: 20px;
+  column-gap: 18px;
   align-items: flex-start;
 }
 
@@ -356,33 +356,25 @@ button{ font: inherit; }
   z-index: 2;
 }
 
-.tl-check{
+.tl-check-img{
   width: 22px;
   height: 22px;
-  border-radius: 999px;
-  background: #2f6bff;
-  color: #fff;
-  font-size: 13px;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 8px 18px rgba(47,107,255,.35);
+  display: block;
 }
 
 .tl-week{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 8px 16px;
+  padding: 10px 22px;
   border-radius: 999px;
   background: #fff;
   border: 1px solid rgba(47,107,255,.25);
   color: #2f6bff;
   font-weight: 800;
-  font-size: 13px;
-  box-shadow: 0 6px 16px rgba(15,23,42,.08);
-  margin-bottom: 10px;
+  font-size: 15px;
+  box-shadow: 0 10px 24px rgba(15,23,42,.08);
+  margin-bottom: 12px;
 }
 
 /* ❌ row별 선 제거 */
