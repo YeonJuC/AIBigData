@@ -785,8 +785,8 @@ button{ font: inherit; }
   /* Hero */
   .hero{ min-height: 480px; }
   .hero-inner{ padding: 54px 0 40px; }
-  .hero-copy h1{ font-size: clamp(26px, 7vw, 34px); }
-  .hero-desc{ font-size: 15.5px; margin-bottom: 26px; }
+  .hero-copy h1{ font-size: clamp(24px, 7vw, 34px); }
+  .hero-desc{ font-size: 12px; margin-bottom: 26px; }
 
   /* 버튼/헤더 */
   .btn{ font-size: 14px; padding: 10px 14px; }
@@ -794,8 +794,8 @@ button{ font: inherit; }
 
   /* 섹션 */
   .section{ padding: 44px 0; }
-  .section-head h2{ font-size: 28px; }
-  .section-head p{ font-size: 15.5px; }
+  .section-head h2{ font-size: 24px; }
+  .section-head p{ font-size: 12px; }
 
   /* 카드 */
   .info-card{ padding: 16px; }
@@ -813,6 +813,7 @@ button{ font: inherit; }
   .tl-week{ font-size: 15px; padding: 8px 16px; }
   .tl-title{ font-size: 17px; }
   .tl-desc{ font-size: 14.5px; }
+  .tl-content {padding-left: 20px; }
 
   .curr-tableImg img{ width: 100%; }
 
