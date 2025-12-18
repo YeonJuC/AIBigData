@@ -437,7 +437,7 @@ button{ font: inherit; }
 
 .curr-tableImg img{
   display: block;
-  width: 100%;
+  width: 80%;
   height: auto;
   background: transparent;   /* 이미지 뒤 배경도 투명 */
 }
