@@ -574,30 +574,52 @@ button{ font: inherit; }
 }
 
 /* Benefits */
+/* 카드 4개 그리드 */
 .benefit-grid{
-  display:grid;
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 14px;
+  gap: 18px;
+  margin-top: 18px;
 }
+
 .benefit-card{
   background: #fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow2);
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(15,23,42,.06);
+  padding: 22px;
+  min-height: 190px;
+
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
 }
-.benefit-icon{
-  font-size: 28px;
-  margin-bottom: 10px;
+
+/* 텍스트 */
+.benefit-text h3{
+  margin: 0 0 10px;
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: -0.02em;
 }
-.benefit-card h3{
-  margin: 0 0 6px;
-  font-size: 16px;
-}
-.benefit-card p{
+
+.benefit-text p{
   margin: 0;
-  color: var(--muted);
-  font-weight: 500;
+  color: #6b7a90;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.55;
+}
+
+/* 오른쪽 아래 큰 아이콘 */
+.benefit-icon{
+  width: 96px;
+  height: 96px;
+  object-fit: contain;
+  position: absolute;
+  right: 18px;
+  bottom: 14px;
 }
 
 /* FAQ */
@@ -696,4 +718,13 @@ button{ font: inherit; }
     margin-top: 8px;
     border-top: 1px solid rgba(15,23,42,.06);
   }
+}
+/* 반응형 */
+@media (max-width: 1024px){
+  .benefit-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+  .benefit-grid{ grid-template-columns: 1fr; }
+  .benefit-card{ min-height: 170px; }
+  .benefit-icon{ width: 84px; height: 84px; }
 }
