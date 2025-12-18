@@ -314,7 +314,7 @@ button{ font: inherit; }
   display: flex;
   flex-direction: column;
   gap: 22px;              /* (원하는 화면처럼 살짝 촘촘) */
-  padding-left: 24px;     /* 왼쪽 여백 */
+  padding-left: 14px;     /* 왼쪽 여백 */
 }
 
 /* 점선 세로 라인(전체 관통) */
