@@ -311,27 +311,26 @@ button{ font: inherit; }
 /* Timeline */
 .timeline{
   position: relative;
-  display:flex;
+  display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 28px;
+  padding-left: 24px;
 }
 
-/* 🔥 전체를 관통하는 세로선 */
 .timeline::before{
   content: "";
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 33px; /* 점 중심에 맞춤 */
+  top: 10px;
+  bottom: 10px;
+  left: 20px;
   width: 2px;
-  background: rgba(47,107,255,.25);
-  border-radius: 2px;
+  border-left: 2px dotted rgba(47,107,255,.45);
 }
 
 .tl-row{
   display: grid;
-  grid-template-columns: 120px 1fr; /* 왼쪽 타임라인 / 오른쪽 내용 */
-  gap: 16px;
+  grid-template-columns: 40px 1fr;
+  column-gap: 20px;
   align-items: flex-start;
 }
 
@@ -354,7 +353,36 @@ button{ font: inherit; }
 
 .tl-left{
   position: relative;
-  z-index: 1;
+  z-index: 2;
+}
+
+.tl-check{
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+  background: #2f6bff;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 18px rgba(47,107,255,.35);
+}
+
+.tl-week{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(47,107,255,.25);
+  color: #2f6bff;
+  font-weight: 800;
+  font-size: 13px;
+  box-shadow: 0 6px 16px rgba(15,23,42,.08);
+  margin-bottom: 10px;
 }
 
 /* ❌ row별 선 제거 */
