@@ -738,21 +738,30 @@ button{ font: inherit; }
 }
 
 /* ===== Responsive (모바일 보정) ===== */
-@media (max-width: 640px){
-  body{ font-size: 17px; } /* ✅ 모바일은 과하게 커지지 않게 */
-  .timeline{ padding-left: 18px; }
-  .timeline::before{ left: 16px; }
-  .tl-row{
-    grid-template-columns: 34px 1fr;
-    column-gap: 14px;
+/* 모바일: 1컬럼으로 */
+@media (max-width: 840px){
+  .apply-panel{
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
   }
-  .tl-check,
-  .tl-check-img{
-    top: 6px;
+  .apply-panel::before{
+    display: none;
   }
+  .apply-dl{
+    padding: 0;
+  }
+  .apply-dl + .apply-dl{
+    margin-top: 8px;
+    border-top: 1px solid rgba(15,23,42,.06);
+  }
+}
 
-  .section-head h2{ font-size: 36px; }
-  .section-head p{ font-size: 19px; }
+/* 반응형 */
+@media (max-width: 1024px){
+  .benefit-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px){
+  .benefit-grid{ grid-template-columns: 1fr; }
 }
 
 @media (max-width: 520px){
