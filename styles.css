@@ -325,16 +325,18 @@ button{ font: inherit; }
   left: 22px;
   width: 2px;
   border-left: 2px dotted rgba(47,107,255,.35);
+  z-index: 0;
 }
 
 .tl-row{
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  column-gap: 18px;
-  align-items: flex-start;
+  position: relative;
+  z-index: 1;
 }
 
 .tl-content{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* ✅ 왼쪽 정렬 고정 */
   padding-top: 6px;
 }
 
@@ -353,13 +355,13 @@ button{ font: inherit; }
 
 .tl-left{
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
+.tl-check,
 .tl-check-img{
-  width: 22px;
-  height: 22px;
-  display: block;
+  position: relative;
+  z-index: 4;
 }
 
 .tl-week{
@@ -375,6 +377,9 @@ button{ font: inherit; }
   font-size: 15px;
   box-shadow: 0 10px 24px rgba(15,23,42,.08);
   margin-bottom: 12px;
+  margin-left: 0;   /* 혹시 적용돼 있으면 제거 */
+  margin-right: 0;
+  align-self: flex-start; /* ✅ 한 번 더 고정 */
 }
 
 /* ❌ row별 선 제거 */
