@@ -379,6 +379,28 @@ button{ font: inherit; }
   box-shadow: var(--shadow2);
 }
 
+/* 오른쪽 컬럼 컨테이너 */
+.tl-right{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* 이미지 박스 */
+.curr-tableImg{
+  background: #fff;
+  border: 1px solid rgba(15,23,42,.12);
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+/* 이미지가 영역에 딱 맞게 */
+.curr-tableImg img{
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 .module-title{
   display:flex;
   gap: 10px;
