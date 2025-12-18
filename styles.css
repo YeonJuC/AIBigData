@@ -488,44 +488,87 @@ button{ font: inherit; }
   background: rgba(47,107,255,.04);
 }
 
-/* Two panels */
-.two-col{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-}
-.panel{
-  background:#fff;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 18px;
-  box-shadow: var(--shadow2);
-}
-.panel-title{
-  margin: 0 0 12px;
-  font-size: 16px;
-}
-.dl{
-  margin: 0;
-  display: grid;
-  gap: 10px;
-}
-.dl-row{
-  display:grid;
-  grid-template-columns: 70px 1fr;
-  gap: 10px;
-  padding: 10px 0;
-  border-top: 1px dashed rgba(15,23,42,.12);
-}
-.dl-row:first-child{ border-top: 0; padding-top: 0; }
-dt{
-  color: #0b1220;
+/* ===== Apply Section (2번 이미지 스타일) ===== */
+.apply-section .section-head h2{
+  margin: 0 0 6px;
+  font-size: 34px;
   font-weight: 900;
+  letter-spacing: -0.02em;
 }
-dd{
+
+.apply-section .section-head p{
   margin: 0;
-  color: var(--muted);
-  font-weight: 500;
+  color: #6b7a90;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* 큰 카드 */
+.apply-panel{
+  margin-top: 18px;
+  background: #fff;
+  border: 1px solid rgba(15,23,42,.08);
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(15,23,42,.06);
+  padding: 26px 28px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0; /* 가운데 구분선이 있으니 gap 없음 */
+  position: relative;
+  overflow: hidden;
+}
+
+/* 가운데 세로 구분선 */
+.apply-panel::before{
+  content: "";
+  position: absolute;
+  top: 18px;
+  bottom: 18px;
+  left: 50%;
+  width: 1px;
+  background: rgba(15,23,42,.06);
+  transform: translateX(-0.5px);
+}
+
+/* dl 리셋 + 컬럼 패딩 */
+.apply-dl{
+  margin: 0;
+  padding: 0 20px;
+}
+
+.apply-dl:first-child{ padding-left: 6px; }
+.apply-dl:last-child{ padding-right: 6px; }
+
+/* 행 단위 */
+.apply-row{
+  display: grid;
+  grid-template-columns: 96px 1fr; /* 왼쪽 라벨 폭 */
+  align-items: center;
+  column-gap: 18px;
+
+  padding: 18px 0;
+  border-bottom: 1px solid rgba(15,23,42,.06);
+}
+
+.apply-row:last-child{
+  border-bottom: none;
+}
+
+/* dt / dd */
+.apply-row dt{
+  margin: 0;
+  font-weight: 900;
+  color: #0b1220;
+  font-size: 15px;
+}
+
+.apply-row dd{
+  margin: 0;
+  color: #6b7a90;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 /* Benefits */
@@ -634,4 +677,21 @@ dd{
   .tl-left::before{ display:none; }
   .tl-left{ padding-left: 0; }
   .tl-dot{ display:none; }
+}
+/* 모바일: 1컬럼으로 */
+@media (max-width: 840px){
+  .apply-panel{
+    grid-template-columns: 1fr;
+    padding: 22px 18px;
+  }
+  .apply-panel::before{
+    display: none;
+  }
+  .apply-dl{
+    padding: 0;
+  }
+  .apply-dl + .apply-dl{
+    margin-top: 8px;
+    border-top: 1px solid rgba(15,23,42,.06);
+  }
 }
