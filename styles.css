@@ -852,7 +852,13 @@ button{ font: inherit; }
   .header-actions .btn{ display:none; }
 
   .hero-inner{ padding: 50px 0 38px; }
-  .hero-desc{ font-size: 15px; }
+  .hero-desc{ font-size: 12px; }
+
+  .section-head h2{ font-size: 24px; }
+  .section-head p{ font-size: 12px; }
+
+  .curr-tableImg img { padding-left: 20px;}
+  .tl-check-img {right: 5px;}
 
   /* 타임라인: 1컬럼(기존 유지) */
   .tl-row{ grid-template-columns: 1fr; }
