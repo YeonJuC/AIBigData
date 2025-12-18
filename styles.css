@@ -310,10 +310,24 @@ button{ font: inherit; }
 
 /* Timeline */
 .timeline{
+  position: relative;
   display:flex;
   flex-direction: column;
   gap: 18px;
 }
+
+/* 🔥 전체를 관통하는 세로선 */
+.timeline::before{
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 33px; /* 점 중심에 맞춤 */
+  width: 2px;
+  background: rgba(47,107,255,.25);
+  border-radius: 2px;
+}
+
 .tl-row{
   display: grid;
   grid-template-columns: 120px 1fr; /* 왼쪽 타임라인 / 오른쪽 내용 */
@@ -340,31 +354,19 @@ button{ font: inherit; }
 
 .tl-left{
   position: relative;
-  padding-left: 26px;
-  padding-top: 6px;
-  color: #0b1220;
-  font-weight: 800;
+  z-index: 1;
 }
+
+/* ❌ row별 선 제거 */
 .tl-left::before{
-  content:"";
-  position:absolute;
-  left: 9px;
-  top: 0;
-  bottom: -22px;
-  width: 2px;
-  background: rgba(47,107,255,.18);
+  content: none;
 }
-.tl-row:last-child .tl-left::before{ bottom: 10px; }
 
 .tl-dot{
   position:absolute;
-  left: 2px;
+  left: 24px;   /* timeline::before 와 중앙 맞춤 */
   top: 8px;
-  width: 16px;
-  height: 16px;
-  border-radius: 999px;
-  background: var(--primary);
-  box-shadow: 0 10px 18px rgba(47,107,255,.28);
+  z-index: 2;
 }
 .tl-label{
   display:inline-flex;
