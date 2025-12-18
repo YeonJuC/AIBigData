@@ -813,9 +813,9 @@ button{ font: inherit; }
   .tl-week{ font-size: 15px; padding: 8px 16px; }
   .tl-title{ font-size: 17px; }
   .tl-desc{ font-size: 14.5px; }
-  .tl-content {padding-left: 20px; }
+  .tl-content {padding-left: 20px; margin-top: -5px;  }
 
-  .curr-tableImg img{ width: 100%; }
+  .curr-tableImg img{ width: 100%;}
 
   /* 표 */
   .table{ font-size: 13.5px; }
