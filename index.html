@@ -3,586 +3,355 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>포스코 청년 AI·Big Data 아카데미</title>
-  <meta name="description" content="AI·Big Data 핵심역량을 이론+실습+프로젝트로 완성하는 포스코 청년 아카데미" />
-
-  <!-- Fonts -->
+  <title>AI · BigData 교육과정</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" as="style"
-        href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
-
-  <style>
-    :root{
-      --bg: #070A12;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.09);
-      --text: rgba(255,255,255,.92);
-      --muted: rgba(255,255,255,.65);
-      --line: rgba(255,255,255,.12);
-      --accent: #5B8CFF;
-      --accent2: #A7F3D0;
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --max: 1120px;
-    }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      font-family: Pretendard, Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-      color:var(--text);
-      background:
-        radial-gradient(1200px 700px at 10% 10%, rgba(91,140,255,.22), transparent 60%),
-        radial-gradient(900px 600px at 80% 20%, rgba(167,243,208,.16), transparent 60%),
-        radial-gradient(800px 700px at 60% 90%, rgba(91,140,255,.10), transparent 60%),
-        var(--bg);
-      overflow-x:hidden;
-    }
-    a{color:inherit; text-decoration:none}
-    .container{max-width:var(--max); margin:0 auto; padding:0 20px}
-    .pill{
-      display:inline-flex; gap:8px; align-items:center;
-      padding:8px 12px; border:1px solid var(--line); border-radius:999px;
-      background:rgba(255,255,255,.04);
-      font-size:13px; color:var(--muted);
-      backdrop-filter: blur(10px);
-    }
-    .badge-dot{width:8px;height:8px;border-radius:50%; background:var(--accent2); box-shadow:0 0 0 4px rgba(167,243,208,.15)}
-    header{
-      position:sticky; top:0; z-index:50;
-      background:rgba(7,10,18,.6);
-      backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .nav{
-      display:flex; align-items:center; justify-content:space-between;
-      height:64px;
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px; font-weight:700;
-      letter-spacing:-.2px;
-    }
-    .brand-mark{
-      width:34px;height:34px;border-radius:12px;
-      background: linear-gradient(135deg, rgba(91,140,255,.95), rgba(167,243,208,.7));
-      box-shadow: 0 10px 30px rgba(91,140,255,.25);
-    }
-    .navlinks{display:flex; gap:18px; align-items:center}
-    .navlinks a{
-      font-size:14px; color:var(--muted);
-      padding:10px 10px; border-radius:10px;
-    }
-    .navlinks a:hover{color:var(--text); background:rgba(255,255,255,.06)}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:12px 16px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.06);
-      color: var(--text);
-      font-weight:600;
-      box-shadow: none;
-      transition: transform .15s ease, background .15s ease, border-color .15s ease;
-      cursor:pointer;
-    }
-    .btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.09); border-color: rgba(255,255,255,.18)}
-    .btn.primary{
-      background: linear-gradient(135deg, rgba(91,140,255,.95), rgba(91,140,255,.65));
-      border-color: rgba(91,140,255,.55);
-      box-shadow: 0 16px 45px rgba(91,140,255,.22);
-    }
-
-    /* Hero */
-    .hero{padding:58px 0 26px}
-    .hero-grid{display:grid; grid-template-columns: 1.2fr .8fr; gap:22px; align-items:stretch}
-    .hero-card{
-      border:1px solid var(--line);
-      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.04));
-      border-radius: calc(var(--radius) + 8px);
-      padding: 26px;
-      box-shadow: var(--shadow);
-      position:relative;
-      overflow:hidden;
-    }
-    .hero-card:before{
-      content:"";
-      position:absolute; inset:-2px;
-      background: radial-gradient(600px 240px at 30% 0%, rgba(167,243,208,.18), transparent 60%);
-      pointer-events:none;
-    }
-    h1{
-      margin:14px 0 10px;
-      font-size: 44px;
-      line-height: 1.05;
-      letter-spacing:-1.2px;
-    }
-    .subtitle{
-      margin:0;
-      font-size:16px;
-      line-height:1.7;
-      color: var(--muted);
-      max-width: 52ch;
-    }
-    .cta-row{display:flex; gap:10px; margin-top:18px; flex-wrap:wrap}
-    .kpi{
-      display:grid; grid-template-columns: repeat(3, 1fr);
-      gap:10px; margin-top:18px;
-    }
-    .kpi .item{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: 16px;
-      padding: 14px;
-    }
-    .kpi .num{font-size:18px; font-weight:800}
-    .kpi .lab{font-size:12px; color:var(--muted); margin-top:4px}
-
-    .side{
-      display:flex; flex-direction:column; gap:12px;
-    }
-    .mini{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding:16px;
-    }
-    .mini h3{margin:0 0 8px; font-size:14px; color:rgba(255,255,255,.9)}
-    .mini p{margin:0; font-size:13px; line-height:1.6; color:var(--muted)}
-    .tagrow{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .tag{
-      font-size:12px; color:rgba(255,255,255,.72);
-      padding:7px 10px; border-radius:999px;
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.03);
-    }
-
-    /* Sections */
-    section{padding:34px 0}
-    .section-title{
-      display:flex; align-items:end; justify-content:space-between; gap:16px;
-      margin-bottom:14px;
-    }
-    .section-title h2{
-      margin:0;
-      font-size:24px;
-      letter-spacing:-.4px;
-    }
-    .section-title .desc{
-      margin:0;
-      font-size:13px;
-      color:var(--muted);
-      line-height:1.6;
-      max-width:60ch;
-    }
-
-    .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:12px}
-    .card{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding:18px;
-      box-shadow: 0 10px 30px rgba(0,0,0,.22);
-    }
-    .card h3{margin:0 0 8px; font-size:16px}
-    .card p{margin:0; font-size:13px; color:var(--muted); line-height:1.7}
-    .card .icon{
-      width:34px;height:34px;border-radius:12px;
-      background: rgba(91,140,255,.18);
-      border:1px solid rgba(91,140,255,.3);
-      display:flex; align-items:center; justify-content:center;
-      margin-bottom:10px;
-      font-weight:800;
-    }
-
-    .timeline{
-      display:grid; grid-template-columns: 1fr 1fr;
-      gap:12px;
-    }
-    .list{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding:18px;
-    }
-    .list .row{
-      display:flex; gap:10px; padding:12px 0;
-      border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .list .row:last-child{border-bottom:0}
-    .chip{
-      font-size:12px; font-weight:700;
-      padding:6px 10px; border-radius:999px;
-      background: rgba(167,243,208,.12);
-      border:1px solid rgba(167,243,208,.22);
-      color: rgba(255,255,255,.9);
-      height: fit-content;
-      white-space:nowrap;
-    }
-    .row .txt b{display:block; font-size:14px; margin-bottom:4px}
-    .row .txt span{font-size:13px; color:var(--muted); line-height:1.6}
-
-    .two{
-      display:grid; grid-template-columns: 1fr 1fr; gap:12px;
-    }
-    .kv{
-      display:flex; justify-content:space-between; gap:14px;
-      padding:12px 0; border-bottom:1px solid rgba(255,255,255,.08);
-    }
-    .kv:last-child{border-bottom:0}
-    .kv .k{color:rgba(255,255,255,.86); font-weight:600}
-    .kv .v{color:var(--muted); text-align:right; line-height:1.5}
-
-    details{
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.04);
-      border-radius: var(--radius);
-      padding: 14px 16px;
-    }
-    details + details{margin-top:10px}
-    summary{
-      cursor:pointer;
-      font-weight:700;
-      color:rgba(255,255,255,.9);
-    }
-    details p{margin:10px 0 0; color:var(--muted); line-height:1.7; font-size:13px}
-
-    footer{
-      padding: 28px 0 46px;
-      border-top:1px solid rgba(255,255,255,.08);
-      color:var(--muted);
-      font-size:13px;
-    }
-    .footer-grid{
-      display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap
-    }
-
-    /* Mobile */
-    @media (max-width: 920px){
-      .hero-grid{grid-template-columns:1fr}
-      h1{font-size:36px}
-      .grid-3{grid-template-columns:1fr}
-      .timeline{grid-template-columns:1fr}
-      .two{grid-template-columns:1fr}
-      .navlinks{display:none}
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
 </head>
 
 <body>
-<header>
-  <div class="container nav">
-    <a class="brand" href="#top" aria-label="홈">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>POSCO AI·Big Data Academy</span>
-    </a>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">
+        <span class="brand-mark">POSCO</span>
+      </a>
 
-    <nav class="navlinks" aria-label="주요 메뉴">
-      <a href="#about">과정소개</a>
-      <a href="#curriculum">커리큘럼</a>
-      <a href="#eligibility">지원자격</a>
-      <a href="#benefits">혜택</a>
-      <a href="#faq">FAQ</a>
-    </nav>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav-link" href="#overview">과정소개</a>
+        <a class="nav-link is-active" href="#curriculum">교육일정</a>
+        <a class="nav-link" href="#place">교육장소</a>
+        <a class="nav-link" href="#apply">지원하기</a>
+        <a class="nav-link" href="#faq">FAQ</a>
+      </nav>
 
-    <a class="btn primary" href="#apply">지원하기</a>
-  </div>
-</header>
+      <div class="header-actions">
+        <button class="btn btn-ghost" type="button">교육/대면안내</button>
+        <button class="btn btn-solid" type="button">로그인/마이페이지</button>
+        <button class="icon-btn" id="menuBtn" aria-label="모바일 메뉴 열기">☰</button>
+      </div>
+    </div>
 
-<main id="top" class="container">
-  <!-- HERO -->
+    <!-- Mobile Drawer -->
+    <div class="mobile-drawer" id="drawer" hidden>
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="모바일 메뉴">
+        <div class="drawer-top">
+          <span class="drawer-title">메뉴</span>
+          <button class="icon-btn" id="closeDrawer" aria-label="모바일 메뉴 닫기">✕</button>
+        </div>
+        <a class="drawer-link" href="#overview">과정소개</a>
+        <a class="drawer-link" href="#curriculum">교육일정</a>
+        <a class="drawer-link" href="#place">교육장소</a>
+        <a class="drawer-link" href="#apply">지원하기</a>
+        <a class="drawer-link" href="#faq">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
   <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-card">
-        <span class="pill"><span class="badge-dot"></span> 청년 AI·Big Data 아카데미</span>
-        <h1>AI·Big Data<br/>실무역량을 프로젝트로 완성</h1>
-        <p class="subtitle">
-          스마트 시대 핵심기술인 AI·Big Data 전문 교육으로 취업 경쟁력을 확보합니다.
-          이론 → 실습 → 팀 프로젝트까지 한 흐름으로 설계된 커리큘럼.
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>
+          AI · BigData<br />
+          <span class="hero-strong">실무역량을 프로젝트로 완성</span>
+        </h1>
+        <p class="hero-desc">
+          스마트 시대 핵심기술인 AI · BigData 전문 교육으로 취업 경쟁력을 확보합니다.<br />
+          이론 → 실습 → 팀 프로젝트까지 한 흐름으로 설계된 커리큘럼!
         </p>
 
-        <div class="cta-row">
-          <a class="btn primary" href="#apply">지금 지원하기</a>
-          <a class="btn" href="#curriculum">커리큘럼 보기</a>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#apply">지금 지원하기</a>
+          <a class="btn btn-outline" href="#curriculum">커리큘럼 보기</a>
         </div>
 
-        <div class="kpi" aria-label="핵심 요약">
-          <div class="item">
-            <div class="num">이론+실습</div>
-            <div class="lab">단계형 구성</div>
-          </div>
-          <div class="item">
-            <div class="num">프로젝트</div>
-            <div class="lab">포트폴리오화</div>
-          </div>
-          <div class="item">
-            <div class="num">차수당 75명</div>
-            <div class="lab">선발 모집</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="side">
-        <div class="mini">
-          <h3>프로그램 목적</h3>
-          <p>AI·Big Data 관련 전문 교육을 통해 차별화된 취업 경쟁력 확보</p>
-          <div class="tagrow">
-            <span class="tag">Python</span>
-            <span class="tag">Big Data</span>
-            <span class="tag">ML/DL</span>
-            <span class="tag">CV/NLP</span>
-          </div>
-        </div>
-
-        <div class="mini">
-          <h3>문의</h3>
-          <p>이메일: <b style="color:rgba(255,255,255,.9)">aibigdata@poscohrd.com</b></p>
-          <p style="margin-top:6px">지원/서류/일정은 공지 기준으로 운영됩니다.</p>
+        <div class="hero-dots" aria-label="슬라이드 인디케이터">
+          <button class="dot is-active" aria-label="슬라이드 1"></button>
+          <button class="dot" aria-label="슬라이드 2"></button>
+          <button class="dot" aria-label="슬라이드 3"></button>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ABOUT / HIGHLIGHTS -->
-  <section id="about">
-    <div class="section-title">
-      <div>
-        <h2>한 번에 이해되는 과정 핵심</h2>
-        <p class="desc">불필요한 문장 줄이고, 지원자가 “내가 여기서 뭘 얻는지”만 바로 보이게 구성.</p>
-      </div>
-    </div>
+  <main>
+    <!-- Program Key Points -->
+    <section class="section" id="overview">
+      <div class="container">
+        <div class="section-head">
+          <h2>프로그램 핵심 포인트</h2>
+          <p>기업에서 수요가 큰 AI·BigData 역량을 “이론 + 실습 + 프로젝트”로 빠르게 체득합니다.</p>
+        </div>
 
-    <div class="grid-3">
-      <div class="card">
-        <div class="icon">01</div>
-        <h3>전문화된 교육</h3>
-        <p>AI·Big Data 이론과 실무 지식을 기반으로 한 체계적 구성</p>
-      </div>
-      <div class="card">
-        <div class="icon">02</div>
-        <h3>이론+실습</h3>
-        <p>과목별 이론·실습 단계형 학습 + 스터디/과제로 자기주도 강화</p>
-      </div>
-      <div class="card">
-        <div class="icon">03</div>
-        <h3>프로젝트 수행</h3>
-        <p>다양한 테마의 Big Data/AI 프로젝트로 결과물을 포트폴리오로 연결</p>
-      </div>
-    </div>
-  </section>
+        <div class="card-grid">
+          <article class="info-card">
+            <div class="badge">1</div>
+            <h3>전문화된 교육</h3>
+            <p>AI·BigData 기반의 실전 지식을 현업 관점으로 깊게 다룹니다.</p>
+          </article>
 
-  <!-- CURRICULUM -->
-  <section id="curriculum">
-    <div class="section-title">
-      <div>
-        <h2>커리큘럼</h2>
-        <p class="desc">1~12주 흐름 + Module I(Big Data) / Module II(AI) 핵심만 요약.</p>
-      </div>
-    </div>
+          <article class="info-card">
+            <div class="badge">2</div>
+            <h3>이론 + 실습</h3>
+            <p>과목별 이론 학습 후 바로 핸즈온 실습으로 이해도를 끌어올립니다.</p>
+          </article>
 
-    <div class="timeline">
-      <div class="list">
-        <div class="row">
-          <span class="chip">1~2주차</span>
-          <div class="txt">
-            <b>기초 이론(비대면)</b>
-            <span>Python 기초 + 머신러닝/딥러닝 기초 학습(입과 시 테스트)</span>
+          <article class="info-card">
+            <div class="badge">3</div>
+            <h3>프로젝트 수행</h3>
+            <p>팀 프로젝트로 결과물을 만들고 포트폴리오까지 연결합니다.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Curriculum Timeline -->
+    <section class="section section-soft" id="curriculum">
+      <div class="container">
+        <div class="section-head">
+          <h2>커리큘럼</h2>
+          <p>10주 완성형 실무 커리큘럼</p>
+        </div>
+
+        <div class="timeline">
+          <!-- Week 1 -->
+          <div class="tl-row">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-label">1주차</div>
+            </div>
+            <div class="tl-card">
+              <h3>Python 프로그래밍</h3>
+              <p class="muted">프로그래밍 기초 및 활용 중심 실습</p>
+            </div>
+          </div>
+
+          <!-- Week 2-5 -->
+          <div class="tl-row">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-label">2–5주차</div>
+            </div>
+            <div class="tl-card">
+              <div class="module-title">
+                <span class="pill">Module 1</span>
+                <h3>BigData 문제해결</h3>
+              </div>
+              <p class="muted">통계/수집/전처리 → 분석 → 문제해결 방법론</p>
+
+              <div class="table-wrap">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th style="width: 22%;">과정명</th>
+                      <th style="width: 12%;">강의</th>
+                      <th>내용</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>통계 &amp; 분석 기초</td>
+                      <td>3일</td>
+                      <td>기초통계, 확률분포, 가설검정, ANOVA, 상관/회귀</td>
+                    </tr>
+                    <tr>
+                      <td>BigData 분석</td>
+                      <td>3일</td>
+                      <td>EDA, 시각화, 분석설계, 데이터 분석 사례</td>
+                    </tr>
+                    <tr>
+                      <td>데이터 수집/전처리</td>
+                      <td>6일</td>
+                      <td>크롤링, 정제, 결측/이상치 처리, 파이프라인</td>
+                    </tr>
+                    <tr>
+                      <td>BigData 과제수행</td>
+                      <td>8일</td>
+                      <td>문제정의 → 분석 → 인사이트 도출 → 발표</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <!-- Week 6-10 -->
+          <div class="tl-row">
+            <div class="tl-left">
+              <div class="tl-dot"></div>
+              <div class="tl-label">6–10주차</div>
+            </div>
+            <div class="tl-card">
+              <div class="module-title">
+                <span class="pill">Module 2</span>
+                <h3>AI 심화 및 구현</h3>
+              </div>
+              <p class="muted">ML/DL, CV/NLP, 생성형 AI, 실무형 팀 프로젝트</p>
+
+              <div class="table-wrap">
+                <table class="table">
+                  <thead>
+                    <tr>
+                      <th style="width: 22%;">과정명</th>
+                      <th style="width: 12%;">강의</th>
+                      <th>내용</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>알고리즘/ML 기초</td>
+                      <td>3일</td>
+                      <td>지도/비지도 학습, 모델 평가, 피처 엔지니어링</td>
+                    </tr>
+                    <tr>
+                      <td>딥러닝</td>
+                      <td>5일</td>
+                      <td>CNN/RNN/Transformer 개요 및 실습</td>
+                    </tr>
+                    <tr>
+                      <td>컴퓨터 비전</td>
+                      <td>5일</td>
+                      <td>이미지 분류/탐지, 전이학습, 실전 파이프라인</td>
+                    </tr>
+                    <tr>
+                      <td>NLP/생성형 AI</td>
+                      <td>4일</td>
+                      <td>텍스트 처리, 임베딩, 프롬프트, RAG 기초</td>
+                    </tr>
+                    <tr>
+                      <td>AI 프로젝트</td>
+                      <td>6일</td>
+                      <td>주제선정 → 구현 → 결과발표 → 포트폴리오 정리</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Eligibility / Apply -->
+    <section class="section" id="apply">
+      <div class="container">
+        <div class="section-head">
+          <h2>지원자격 / 모집</h2>
+          <p>프로그램 지원 자격 및 모집 사항을 확인해보세요.</p>
+        </div>
+
+        <div class="two-col">
+          <div class="panel">
+            <h3 class="panel-title">지원자격</h3>
+            <dl class="dl">
+              <div class="dl-row">
+                <dt>학력</dt>
+                <dd>4년제 대학 졸업(예정)자 또는 이에 준하는 수준</dd>
+              </div>
+              <div class="dl-row">
+                <dt>참여</dt>
+                <dd>전일제 참여 가능자(평일)</dd>
+              </div>
+              <div class="dl-row">
+                <dt>기타</dt>
+                <dd>교육 기간 중 타 과정/근로계약 소속 제외</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel-title">모집요강</h3>
+            <dl class="dl">
+              <div class="dl-row">
+                <dt>모집정원</dt>
+                <dd>차수별 75명 내외(변동 가능)</dd>
+              </div>
+              <div class="dl-row">
+                <dt>필수</dt>
+                <dd>국내 취업가능자(졸업/수료 가능 여부 확인)</dd>
+              </div>
+              <div class="dl-row">
+                <dt>권장</dt>
+                <dd>프로그래밍 기초, 기초수학, 데이터 관심</dd>
+              </div>
+            </dl>
           </div>
         </div>
-        <div class="row">
-          <span class="chip">3주차</span>
-          <div class="txt">
-            <b>Python 프로그래밍</b>
-            <span>프로그래밍 기초 및 활용 중심 실습</span>
-          </div>
-        </div>
-        <div class="row">
-          <span class="chip">4~7주차</span>
-          <div class="txt">
-            <b>Big Data 문제해결</b>
-            <span>통계/수집/전처리 + 분석 절차 + 문제해결 방법론</span>
-          </div>
-        </div>
-        <div class="row">
-          <span class="chip">8~12주차</span>
-          <div class="txt">
-            <b>AI 심화 & 구현</b>
-            <span>딥러닝 심화 + 컴퓨터비전/자연어처리 등 실무 주제 과제</span>
-          </div>
-        </div>
       </div>
+    </section>
 
-      <div class="list">
-        <div class="row">
-          <span class="chip">Module I</span>
-          <div class="txt">
-            <b>Big Data</b>
-            <span>통계 이해, 데이터 핸들링/전처리, 분석 계획 수립, 팀 과제 수행 및 발표</span>
-          </div>
+    <!-- Benefits -->
+    <section class="section section-soft" id="place">
+      <div class="container">
+        <div class="section-head">
+          <h2>교육 특전</h2>
+          <p>교육생이 누릴 수 있는 혜택</p>
         </div>
-        <div class="row">
-          <span class="chip">Module II</span>
-          <div class="txt">
-            <b>AI</b>
-            <span>알고리즘 기초, ML/DL, 생성모델 이해, CV, NLP, AI 과제 수행</span>
-          </div>
-        </div>
-        <div class="row">
-          <span class="chip">프로젝트</span>
-          <div class="txt">
-            <b>주제 선정 → 리뷰 → 지원 → 완성</b>
-            <span>자문/리뷰, 물품·장비·컴퓨팅 환경 지원, 최종 발표 및 시상 흐름</span>
-          </div>
+
+        <div class="benefit-grid">
+          <article class="benefit-card">
+            <div class="benefit-icon">📚</div>
+            <h3>무상교육</h3>
+            <p>참가자 전원 무상교육(운영 기준)</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🍔</div>
+            <h3>숙식제공</h3>
+            <p>합숙 과정 운영 시 숙식 제공</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🪙</div>
+            <h3>교육수당</h3>
+            <p>참가자 전원 교육수당 지급</p>
+          </article>
+
+          <article class="benefit-card">
+            <div class="benefit-icon">🏆</div>
+            <h3>우수자 혜택</h3>
+            <p>우수 성적자 포상 및 후속 기회 제공</p>
+          </article>
         </div>
       </div>
+    </section>
+
+    <!-- FAQ (placeholder) -->
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>자주 묻는 질문</p>
+        </div>
+
+        <div class="faq">
+          <details class="faq-item">
+            <summary>교육은 온라인/오프라인인가요?</summary>
+            <p>과정 운영 방식에 따라 다르며, 상세 안내는 공지사항에서 확인하세요.</p>
+          </details>
+          <details class="faq-item">
+            <summary>프로젝트 결과물은 포트폴리오로 쓸 수 있나요?</summary>
+            <p>네. 팀/개인 기여도를 정리해 포트폴리오에 반영할 수 있도록 가이드가 제공됩니다.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© POSCO AI · BigData</span>
+      <span class="muted">본 페이지는 템플릿 예시입니다.</span>
     </div>
-  </section>
+  </footer>
 
-  <!-- ELIGIBILITY -->
-  <section id="eligibility">
-    <div class="section-title">
-      <div>
-        <h2>지원자격 / 모집</h2>
-        <p class="desc">지원자가 제일 궁금해하는 것부터: “내가 지원 가능?” → “정원/필수사항은?”</p>
-      </div>
-    </div>
-
-    <div class="two">
-      <div class="card">
-        <h3 style="margin-top:0">지원자격</h3>
-        <div class="kv">
-          <div class="k">학력</div>
-          <div class="v">4년제 대학 졸업자 또는 졸업예정자(2년 이내)</div>
-        </div>
-        <div class="kv">
-          <div class="k">참여</div>
-          <div class="v">합숙교육 기간 전체 일정 합숙 가능</div>
-        </div>
-        <div class="kv">
-          <div class="k">기타</div>
-          <div class="v">전체 교육 기간 내 근로자(사업/사업장 소속) 제외</div>
-        </div>
-      </div>
-
-      <div class="card">
-        <h3 style="margin-top:0">모집/확인사항</h3>
-        <div class="kv">
-          <div class="k">모집정원</div>
-          <div class="v">차수당 75명 이내(선발 모집)</div>
-        </div>
-        <div class="kv">
-          <div class="k">필수</div>
-          <div class="v">국민내일배움카드(발급/수강 가능 여부 확인)</div>
-        </div>
-        <div class="kv">
-          <div class="k">필기</div>
-          <div class="v">프로그래밍, AI를 위한 기초수학</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- BENEFITS -->
-  <section id="benefits">
-    <div class="section-title">
-      <div>
-        <h2>교육 혜택</h2>
-        <p class="desc">혜택은 카드로 짧게, 신뢰감 있게. (과장 금지, 공지 내용만)</p>
-      </div>
-    </div>
-
-    <div class="grid-3">
-      <div class="card">
-        <div class="icon">✓</div>
-        <h3>무상 교육</h3>
-        <p>참가자 전원 무상교육(운영 기준)</p>
-      </div>
-      <div class="card">
-        <div class="icon">✓</div>
-        <h3>숙식 제공</h3>
-        <p>합숙 과정 운영 시 숙식 제공</p>
-      </div>
-      <div class="card">
-        <div class="icon">✓</div>
-        <h3>교육수당</h3>
-        <p>교육수당 지급(세부 기준은 공지 참고)</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section id="faq">
-    <div class="section-title">
-      <div>
-        <h2>자주 묻는 질문</h2>
-        <p class="desc">FAQ는 “지원자격/일정/서류/카드” 4개만 잡아도 이탈이 확 줄어.</p>
-      </div>
-    </div>
-
-    <details>
-      <summary>지원자격에서 ‘근로자 제외’는 어떤 기준인가요?</summary>
-      <p>전체 교육 기간 내 사업/사업장에 소속된 근로자는 제외됩니다. 본인 상황은 공지/운영 문의를 통해 확인하는 게 안전합니다.</p>
-    </details>
-
-    <details>
-      <summary>필기시험은 어떤 과목인가요?</summary>
-      <p>프로그래밍, AI를 위한 기초수학(확률·통계/미적분/선형대수 등)으로 안내되어 있습니다.</p>
-    </details>
-
-    <details>
-      <summary>국민내일배움카드는 꼭 필요한가요?</summary>
-      <p>교육 입과 시 발급이 필수로 안내되어 있습니다. 발급/수강 가능 여부를 미리 확인해두는 게 좋아요.</p>
-    </details>
-
-    <details>
-      <summary>프로젝트 결과물은 어떻게 활용되나요?</summary>
-      <p>프로젝트 결과는 포트폴리오로 활용 가능하도록 구성되어 있습니다.</p>
-    </details>
-  </section>
-
-  <!-- APPLY (CTA) -->
-  <section id="apply">
-    <div class="hero-card" style="margin: 10px 0 34px;">
-      <span class="pill"><span class="badge-dot"></span> Ready to Apply</span>
-      <h2 style="margin:12px 0 8px; font-size:28px; letter-spacing:-.6px;">지원은 빠르게, 정보는 명확하게</h2>
-      <p class="subtitle" style="max-width:none">
-        버튼 하나로 지원 페이지로 연결하고, 일정/장소/FAQ는 상단 메뉴에서 바로 이동하게 설계했습니다.
-      </p>
-      <div class="cta-row">
-        <!-- 실제 ‘지원하기’ 링크로 교체 -->
-        <a class="btn primary" href="#" onclick="alert('여기에 실제 지원 링크를 연결하세요!')">지원 페이지로 이동</a>
-        <a class="btn" href="#top">맨 위로</a>
-      </div>
-    </div>
-  </section>
-</main>
-
-<footer>
-  <div class="container footer-grid">
-    <div>
-      <b style="color:rgba(255,255,255,.86)">청년 AI·Big Data 아카데미</b><br/>
-      문의: aibigdata@poscohrd.com
-    </div>
-    <div>
-      <a href="#" style="margin-right:14px">이용약관</a>
-      <a href="#">개인정보처리방침</a>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // 부드러운 스크롤
-  document.querySelectorAll('a[href^="#"]').forEach(a=>{
-    a.addEventListener('click', (e)=>{
-      const id = a.getAttribute('href');
-      if(!id || id === '#') return;
-      const el = document.querySelector(id);
-      if(!el) return;
-      e.preventDefault();
-      el.scrollIntoView({behavior:'smooth', block:'start'});
-    });
-  });
-</script>
+  <script src="./app.js"></script>
 </body>
 </html>
