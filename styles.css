@@ -308,36 +308,103 @@ button{ font: inherit; }
   font-size: 14px;
 }
 
-/* Timeline */
+/* ===== Timeline base ===== */
 .timeline{
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 28px;
-  padding-left: 24px;
+  gap: 22px;              /* (원하는 화면처럼 살짝 촘촘) */
+  padding-left: 24px;     /* 왼쪽 여백 */
 }
 
+/* 점선 세로 라인(전체 관통) */
 .timeline::before{
   content: "";
   position: absolute;
   top: 10px;
   bottom: 10px;
-  left: 22px;
+
+  left: 22px;             /* ✅ 체크 중심 X와 맞춰야 함 */
   width: 2px;
   border-left: 2px dotted rgba(47,107,255,.35);
-  z-index: 0;
+
+  z-index: 0;              /* 선은 뒤로 */
 }
 
 .tl-row{
   position: relative;
-  z-index: 1;
+  z-index: 1;              /* row는 선 위 */
+  display: grid;
+  grid-template-columns: 40px 1fr;  /* 왼쪽(체크) / 오른쪽(콘텐츠) */
+  column-gap: 18px;
+  align-items: flex-start;
 }
 
+/* ===== Left (check) ===== */
+.tl-left{
+  position: relative;
+  z-index: 3;              /* 체크 영역을 선 위로 */
+}
+
+/* 기존 row별 선 제거(끊김 방지) */
+.tl-left::before{
+  content: none;
+}
+
+/* 체크(텍스트 버전) */
+.tl-check{
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #2f6bff;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 4;
+
+  /* ✅ 주차 pill( tl-week ) 세로 중앙 느낌으로 맞추기 */
+  top: 6px;
+}
+
+/* 체크(이미지 버전) */
+.tl-check-img{
+  width: 18px;
+  height: 18px;
+  display: block;
+
+  position: relative;
+  z-index: 4;
+  top: 6px;                /* tl-check과 동일 정렬 */
+}
+
+/* ===== Right content ===== */
 .tl-content{
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* ✅ 왼쪽 정렬 고정 */
-  padding-top: 6px;
+  align-items: flex-start;  /* ✅ 주차 pill/텍스트 왼쪽 정렬 고정 */
+  padding-top: 2px;         /* ✅ 위로 살짝 당겨서 오른쪽 이미지 느낌 */
+}
+
+/* 주차 pill */
+.tl-week{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: #fff;
+  border: 1px solid rgba(47,107,255,.25);
+  color: #2f6bff;
+  font-weight: 800;
+  font-size: 15px;
+  box-shadow: 0 10px 24px rgba(15,23,42,.08);
+  margin: 0 0 12px 0;
+  align-self: flex-start;   /* ✅ 한 번 더 고정 */
 }
 
 .tl-title{
@@ -353,60 +420,7 @@ button{ font: inherit; }
   font-weight: 500;
 }
 
-.tl-left{
-  position: relative;
-  z-index: 3;
-}
-
-.tl-check,
-.tl-check-img{
-  position: relative;
-  z-index: 4;
-}
-
-.tl-week{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 22px;
-  border-radius: 999px;
-  background: #fff;
-  border: 1px solid rgba(47,107,255,.25);
-  color: #2f6bff;
-  font-weight: 800;
-  font-size: 15px;
-  box-shadow: 0 10px 24px rgba(15,23,42,.08);
-  margin-bottom: 12px;
-  margin-left: 0;   /* 혹시 적용돼 있으면 제거 */
-  margin-right: 0;
-  align-self: flex-start; /* ✅ 한 번 더 고정 */
-}
-
-/* ❌ row별 선 제거 */
-.tl-left::before{
-  content: none;
-}
-
-.tl-dot{
-  position:absolute;
-  left: 24px;   /* timeline::before 와 중앙 맞춤 */
-  top: 8px;
-  z-index: 2;
-}
-.tl-label{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background: #fff;
-  border: 1px solid rgba(47,107,255,.18);
-  border-radius: 999px;
-  padding: 8px 12px;
-  font-size: 13px;
-  width: fit-content;
-  box-shadow: var(--shadow2);
-}
-
-/* 오른쪽 컬럼 컨테이너 */
+/* Week 2-5, 6-10처럼 표/이미지 들어가는 오른쪽 컨테이너 */
 .tl-right{
   display: flex;
   flex-direction: column;
@@ -586,6 +600,30 @@ dd{
   .benefit-grid{ grid-template-columns: repeat(2, 1fr); }
 
   .tl-row{ grid-template-columns: 120px 1fr; }
+}
+
+/* ===== (사용 안 하면 숨김) 기존 dot/label ===== */
+.tl-dot,
+.tl-label{
+  display: none !important;
+}
+
+/* ===== Responsive (모바일 보정) ===== */
+@media (max-width: 640px){
+  .timeline{
+    padding-left: 18px;
+  }
+  .timeline::before{
+    left: 16px;
+  }
+  .tl-row{
+    grid-template-columns: 34px 1fr;
+    column-gap: 14px;
+  }
+  .tl-check,
+  .tl-check-img{
+    top: 6px;
+  }
 }
 
 @media (max-width: 520px){
