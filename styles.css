@@ -21,7 +21,7 @@ body{
   color: var(--text);
   background: var(--bg);
 
-  /* ✅ 전체 베이스 업 */
+  /* ✅ 기본(PC 포함) */
   font-size: 18px;
   line-height: 1.6;
 }
@@ -58,8 +58,6 @@ button{ font: inherit; }
   color: #fff;
   font-weight: 700;
   letter-spacing: .4px;
-
-  /* ✅ 브랜드 살짝 업 */
   font-size: 16px;
 }
 .brand-mark{
@@ -198,6 +196,7 @@ button{ font: inherit; }
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;
+  z-index: 2;
 }
 .hero-copy{
   color: #fff;
@@ -243,23 +242,17 @@ button{ font: inherit; }
 .btn-outline:hover{ background: rgba(255,255,255,.14); }
 
 /* ✅ 슬라이더 */
-.hero-slider{
-  position: absolute;
-  inset: 0;
-}
-
+.hero-slider{ position: absolute; inset: 0; }
 .hero-slide{
   position: absolute;
   inset: 0;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
   opacity: 0;
   transform: scale(1.03);
   transition: opacity 1s ease, transform 4s ease;
 }
-
 .hero-slide.is-active{
   opacity: 1;
   transform: scale(1);
@@ -278,19 +271,12 @@ button{ font: inherit; }
   z-index: 1;
 }
 
-/* 텍스트는 위로 */
-.hero-inner{
-  position: relative;
-  z-index: 2;
-}
-
-/* dots (button 기반) */
+/* dots */
 .hero-dots{
   margin-top: 18px;
   display: flex;
   gap: 10px;
 }
-
 .hero-dots .dot{
   width: 9px;
   height: 9px;
@@ -301,12 +287,10 @@ button{ font: inherit; }
   cursor: pointer;
   transition: all .25s ease;
 }
-
 .hero-dots .dot.is-active{
   width: 20px;
   background: #fff;
 }
-
 .dot{
   width: 9px; height: 9px;
   border-radius: 999px;
@@ -320,12 +304,8 @@ button{ font: inherit; }
 }
 
 /* Sections */
-.section{
-  padding: 60px 0;
-}
-.section-soft{
-  background: var(--soft);
-}
+.section{ padding: 60px 0; }
+.section-soft{ background: var(--soft); }
 
 .section-head h2{
   margin: 0 0 8px;
@@ -365,8 +345,6 @@ button{ font: inherit; }
   justify-content:center;
   font-weight: 900;
   margin-bottom: 12px;
-
-  /* ✅ 뱃지 텍스트 */
   font-size: 14px;
 }
 .info-card h3{
@@ -390,14 +368,11 @@ button{ font: inherit; }
   gap: 24px;
   padding-left: 15px;
 }
-
-/* 점선 세로 라인(전체 관통) */
 .timeline::before{
   content: "";
   position: absolute;
   top: 10px;
   bottom: 10px;
-
   left: 22px;
   width: 2px;
   border-left: 2px dotted rgba(47,107,255,.35);
@@ -413,12 +388,7 @@ button{ font: inherit; }
   align-items: flex-start;
 }
 
-/* ===== Left (check) ===== */
-.tl-left{
-  position: relative;
-  z-index: 3;
-}
-
+.tl-left{ position: relative; z-index: 3; }
 .tl-left::before{ content: none; }
 
 .tl-check{
@@ -432,30 +402,25 @@ button{ font: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-
   position: relative;
   z-index: 4;
   top: 7px;
 }
-
 .tl-check-img{
   width: 20px;
   height: 20px;
   display: block;
-
   position: relative;
   z-index: 4;
   top: 7px;
 }
 
-/* ===== Right content ===== */
 .tl-content{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   padding-top: 2px;
 }
-
 .tl-week{
   display: inline-flex;
   align-items: center;
@@ -471,13 +436,11 @@ button{ font: inherit; }
   margin: 0 0 12px 0;
   align-self: flex-start;
 }
-
 .tl-title{
   margin: 0 0 8px;
   font-size: 24px;
   font-weight: 900;
 }
-
 .tl-desc{
   margin: 0;
   color: #64748b;
@@ -491,15 +454,12 @@ button{ font: inherit; }
   flex-direction: column;
   gap: 14px;
 }
-
-/*이미지 박스*/
 .curr-tableImg{
   background: transparent;
   border: none;
   border-radius: 0;
   padding: 0;
 }
-
 .curr-tableImg img{
   display: block;
   width: 95%;
@@ -560,7 +520,6 @@ button{ font: inherit; }
   font-weight: 900;
   letter-spacing: -0.02em;
 }
-
 .apply-section .section-head p{
   margin: 0;
   color: #6b7a90;
@@ -584,8 +543,6 @@ button{ font: inherit; }
   position: relative;
   overflow: hidden;
 }
-
-/* 가운데 세로 구분선 */
 .apply-panel::before{
   content: "";
   position: absolute;
@@ -597,11 +554,7 @@ button{ font: inherit; }
   transform: translateX(-0.5px);
 }
 
-.apply-dl{
-  margin: 0;
-  padding: 0 20px;
-}
-
+.apply-dl{ margin: 0; padding: 0 20px; }
 .apply-dl:first-child{ padding-left: 6px; }
 .apply-dl:last-child{ padding-right: 6px; }
 
@@ -614,10 +567,7 @@ button{ font: inherit; }
   padding: 20px 0;
   border-bottom: 1px solid rgba(15,23,42,.06);
 }
-
-.apply-row:last-child{
-  border-bottom: none;
-}
+.apply-row:last-child{ border-bottom: none; }
 
 .apply-row dt{
   margin: 0;
@@ -625,7 +575,6 @@ button{ font: inherit; }
   color: #0b1220;
   font-size: 18px;
 }
-
 .apply-row dd{
   margin: 0;
   color: #6b7a90;
@@ -641,7 +590,6 @@ button{ font: inherit; }
   gap: 18px;
   margin-top: 18px;
 }
-
 .benefit-card{
   background: #fff;
   border: 1px solid rgba(15,23,42,.08);
@@ -655,14 +603,12 @@ button{ font: inherit; }
   position: relative;
   overflow: hidden;
 }
-
 .benefit-text h3{
   margin: 0 0 10px;
   font-size: 22px;
   font-weight: 900;
   letter-spacing: -0.02em;
 }
-
 .benefit-text p{
   margin: 0;
   color: #6b7a90;
@@ -670,7 +616,6 @@ button{ font: inherit; }
   font-weight: 700;
   line-height: 1.6;
 }
-
 .benefit-icon{
   width: 104px;
   height: 104px;
@@ -719,7 +664,9 @@ button{ font: inherit; }
   font-size: 15px;
 }
 
-/* Responsive */
+/* =========================================================
+   Responsive (레이아웃)
+   ========================================================= */
 @media (max-width: 980px){
   .nav{ display:none; }
   .icon-btn{ display: inline-flex; align-items:center; justify-content:center; }
@@ -731,32 +678,25 @@ button{ font: inherit; }
   .tl-row{ grid-template-columns: 120px 1fr; }
 }
 
-/* ===== (사용 안 하면 숨김) 기존 dot/label ===== */
+/* (사용 안 하면 숨김) */
 .tl-dot,
-.tl-label{
-  display: none !important;
-}
+.tl-label{ display: none !important; }
 
-/* ===== Responsive (모바일 보정) ===== */
-/* 모바일: 1컬럼으로 */
+/* Apply: 1컬럼 */
 @media (max-width: 840px){
   .apply-panel{
     grid-template-columns: 1fr;
     padding: 22px 18px;
   }
-  .apply-panel::before{
-    display: none;
-  }
-  .apply-dl{
-    padding: 0;
-  }
+  .apply-panel::before{ display: none; }
+  .apply-dl{ padding: 0; }
   .apply-dl + .apply-dl{
     margin-top: 8px;
     border-top: 1px solid rgba(15,23,42,.06);
   }
 }
 
-/* 반응형 */
+/* Benefits grid */
 @media (max-width: 1024px){
   .benefit-grid{ grid-template-columns: repeat(2, 1fr); }
 }
@@ -764,88 +704,170 @@ button{ font: inherit; }
   .benefit-grid{ grid-template-columns: 1fr; }
 }
 
-@media (max-width: 520px){
-  .header-actions .btn{ display:none; }
-  .hero-inner{ padding: 56px 0 44px; }
-  .hero-desc{ font-size: 19px; }
+/* =========================================================
+   ✅ PC: 글씨만 살짝 다운(자연스럽게)
+   ========================================================= */
+@media (min-width: 1025px){
+  body{ font-size: 17px; line-height: 1.58; }
 
-  .benefit-grid{ grid-template-columns: 1fr; }
+  .section-head h2{ font-size: 42px; }
+  .section-head p{ font-size: 20px; }
 
-  .tl-row{ grid-template-columns: 1fr; }
-  .tl-left::before{ display:none; }
-  .tl-left{ padding-left: 0; }
-  .tl-dot{ display:none; }
+  .hero-desc{ font-size: 20px; }
 
-  .benefit-card{ min-height: 190px; }
-  .benefit-icon{ width: 92px; height: 92px; }
+  .info-card h3{ font-size: 22px; }
+  .info-card p{ font-size: 17px; }
 
-  .apply-section .section-head h2{ font-size: 34px; }
+  .tl-week{ font-size: 20px; }
+  .tl-title{ font-size: 22px; }
+  .tl-desc{ font-size: 17px; }
+
+  .apply-section .section-head h2{ font-size: 38px; }
+  .apply-row dt,
+  .apply-row dd{ font-size: 17px; }
+
+  .benefit-text h3{ font-size: 21px; }
+  .benefit-text p{ font-size: 15.5px; }
 }
 
-/* ===============================
-   태블릿 전용 타이포 & 여백 보정
-   (PC 느낌 유지용)
-   =============================== */
+/* =========================================================
+   태블릿 전용 타이포 & 여백 보정 (841~1024)
+   ========================================================= */
 @media (min-width: 841px) and (max-width: 1024px){
-  body{
-    font-size: 16.5px;     /* PC(18) ↔ 모바일(15.5) 중간 */
-    line-height: 1.58;
-  }
+  body{ font-size: 16.5px; line-height: 1.58; }
 
-  /* Header */
   .brand{ font-size: 15px; }
   .btn{ font-size: 15px; padding: 11px 16px; }
 
-  /* Hero */
   .hero{ min-height: 520px; }
   .hero-inner{ padding: 64px 0 46px; }
-  .hero-copy h1{
-    font-size: clamp(32px, 4vw, 44px);
-  }
-  .hero-desc{
-    font-size: 18px;
-    max-width: 640px;
-  }
+  .hero-copy h1{ font-size: clamp(32px, 4vw, 44px); }
+  .hero-desc{ font-size: 18px; max-width: 640px; }
 
-  /* Section */
   .section{ padding: 54px 0; }
   .section-head h2{ font-size: 38px; }
   .section-head p{ font-size: 18px; }
 
-  /* Cards */
   .info-card{ padding: 20px; }
   .info-card h3{ font-size: 21px; }
   .info-card p{ font-size: 16px; }
 
-  /* Timeline */
-  .tl-week{
-    font-size: 18px;
-    padding: 11px 22px;
-  }
+  .tl-week{ font-size: 18px; padding: 11px 22px; }
   .tl-title{ font-size: 21px; }
   .tl-desc{ font-size: 16px; }
 
-  /* Table */
   .table{ font-size: 15px; }
   .table thead th,
   .table td{ padding: 13px 13px; }
 
-  /* Apply */
   .apply-section .section-head h2{ font-size: 36px; }
   .apply-section .section-head p{ font-size: 16px; }
   .apply-row dt,
   .apply-row dd{ font-size: 16px; }
 
-  /* Benefit */
   .benefit-card{ min-height: 190px; }
   .benefit-text h3{ font-size: 20px; }
   .benefit-text p{ font-size: 15px; }
   .benefit-icon{ width: 96px; height: 96px; }
 
-  /* FAQ */
   .faq-item summary{ font-size: 17px; }
   .faq-item p{ font-size: 15px; }
 
-  /* Footer */
   .footer-inner{ font-size: 14px; }
+}
+
+/* =========================================================
+   ✅ 모바일: 글자 + 박스 + 아이콘 같이 다운
+   ========================================================= */
+@media (max-width: 640px){
+  body{ font-size: 15.5px; line-height: 1.55; }
+
+  /* Hero */
+  .hero{ min-height: 480px; }
+  .hero-inner{ padding: 54px 0 40px; }
+  .hero-copy h1{ font-size: clamp(26px, 7vw, 34px); }
+  .hero-desc{ font-size: 15.5px; margin-bottom: 26px; }
+
+  /* 버튼/헤더 */
+  .btn{ font-size: 14px; padding: 10px 14px; }
+  .icon-btn{ width: 40px; height: 40px; }
+
+  /* 섹션 */
+  .section{ padding: 44px 0; }
+  .section-head h2{ font-size: 28px; }
+  .section-head p{ font-size: 15.5px; }
+
+  /* 카드 */
+  .info-card{ padding: 16px; }
+  .badge{ width: 26px; height: 26px; font-size: 12px; }
+  .info-card h3{ font-size: 18px; }
+  .info-card p{ font-size: 14.5px; }
+
+  /* 타임라인 */
+  .timeline{ gap: 20px; }
+  .timeline::before{ left: 18px; }
+  .tl-row{ grid-template-columns: 34px 1fr; column-gap: 14px; }
+  .tl-check,
+  .tl-check-img{ width: 16px; height: 16px; top: 6px; }
+
+  .tl-week{ font-size: 15px; padding: 8px 16px; }
+  .tl-title{ font-size: 17px; }
+  .tl-desc{ font-size: 14.5px; }
+
+  .curr-tableImg img{ width: 100%; }
+
+  /* 표 */
+  .table{ font-size: 13.5px; }
+  .table thead th{ font-size: 13.5px; }
+  .table thead th,
+  .table td{ padding: 10px 10px; }
+
+  /* Apply */
+  .apply-panel{ padding: 18px 16px; }
+  .apply-row{ grid-template-columns: 96px 1fr; padding: 14px 0; }
+  .apply-row dt,
+  .apply-row dd{ font-size: 14.5px; }
+
+  /* Benefit */
+  .benefit-card{ padding: 16px; min-height: 170px; }
+  .benefit-text h3{ font-size: 17px; }
+  .benefit-text p{ font-size: 14px; }
+  .benefit-icon{ width: 76px; height: 76px; right: 14px; bottom: 12px; }
+
+  /* FAQ */
+  .faq{ gap: 10px; }
+  .faq-item{ padding: 14px; }
+  .faq-item summary{ font-size: 15.5px; }
+  .faq-item p{ font-size: 14px; margin-top: 10px; }
+
+  /* Footer */
+  .footer-inner{ font-size: 13px; padding: 16px 0; }
+}
+
+/* =========================================================
+   520px 이하: 초모바일 추가 보정
+   ========================================================= */
+@media (max-width: 520px){
+  .header-actions .btn{ display:none; }
+
+  .hero-inner{ padding: 50px 0 38px; }
+  .hero-desc{ font-size: 15px; }
+
+  /* 타임라인: 1컬럼(기존 유지) */
+  .tl-row{ grid-template-columns: 1fr; }
+  .tl-left::before{ display:none; }
+  .tl-left{ padding-left: 0; }
+
+  /* Benefit */
+  .benefit-card{ min-height: 160px; }
+  .benefit-icon{ width: 70px; height: 70px; }
+
+  .apply-section .section-head h2{ font-size: 26px; }
+}
+
+/* 380px 이하: 아주 작은 폰 */
+@media (max-width: 380px){
+  body{ font-size: 15px; }
+  .hero-copy h1{ font-size: 28px; }
+  .section-head h2{ font-size: 26px; }
 }
