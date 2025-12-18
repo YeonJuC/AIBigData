@@ -241,6 +241,81 @@ button{ font: inherit; }
   gap: 8px;
   align-items: center;
 }
+
+/* Hero */
+.hero{
+  position: relative;
+  min-height: 520px;
+  display: flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+/* ✅ 슬라이더 */
+.hero-slider{
+  position: absolute;
+  inset: 0;
+}
+
+.hero-slide{
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  opacity: 0;
+  transform: scale(1.03);
+  transition: opacity 1s ease, transform 4s ease;
+}
+
+.hero-slide.is-active{
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* overlay 그대로 */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background: linear-gradient(
+    90deg,
+    rgba(6,10,18,.75) 0%,
+    rgba(6,10,18,.50) 45%,
+    rgba(6,10,18,.15) 100%
+  );
+  z-index: 1;
+}
+
+/* 텍스트는 위로 */
+.hero-inner{
+  position: relative;
+  z-index: 2;
+}
+
+/* dots (button 기반) */
+.hero-dots{
+  margin-top: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.hero-dots .dot{
+  width: 8px;
+  height: 8px;
+  border-radius: 999px;
+  border: none;
+  background: rgba(255,255,255,.45);
+  padding: 0;
+  cursor: pointer;
+  transition: all .25s ease;
+}
+
+.hero-dots .dot.is-active{
+  width: 18px;
+  background: #fff;
+}
+
 .dot{
   width: 8px; height: 8px;
   border-radius: 999px;
