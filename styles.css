@@ -782,28 +782,70 @@ button{ font: inherit; }
   .apply-section .section-head h2{ font-size: 34px; }
 }
 
-/* 모바일: 1컬럼으로 */
-@media (max-width: 840px){
-  .apply-panel{
-    grid-template-columns: 1fr;
-    padding: 22px 18px;
+/* ===============================
+   태블릿 전용 타이포 & 여백 보정
+   (PC 느낌 유지용)
+   =============================== */
+@media (min-width: 841px) and (max-width: 1024px){
+  body{
+    font-size: 16.5px;     /* PC(18) ↔ 모바일(15.5) 중간 */
+    line-height: 1.58;
   }
-  .apply-panel::before{
-    display: none;
-  }
-  .apply-dl{
-    padding: 0;
-  }
-  .apply-dl + .apply-dl{
-    margin-top: 8px;
-    border-top: 1px solid rgba(15,23,42,.06);
-  }
-}
 
-/* 반응형 */
-@media (max-width: 1024px){
-  .benefit-grid{ grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 520px){
-  .benefit-grid{ grid-template-columns: 1fr; }
+  /* Header */
+  .brand{ font-size: 15px; }
+  .btn{ font-size: 15px; padding: 11px 16px; }
+
+  /* Hero */
+  .hero{ min-height: 520px; }
+  .hero-inner{ padding: 64px 0 46px; }
+  .hero-copy h1{
+    font-size: clamp(32px, 4vw, 44px);
+  }
+  .hero-desc{
+    font-size: 18px;
+    max-width: 640px;
+  }
+
+  /* Section */
+  .section{ padding: 54px 0; }
+  .section-head h2{ font-size: 38px; }
+  .section-head p{ font-size: 18px; }
+
+  /* Cards */
+  .info-card{ padding: 20px; }
+  .info-card h3{ font-size: 21px; }
+  .info-card p{ font-size: 16px; }
+
+  /* Timeline */
+  .tl-week{
+    font-size: 18px;
+    padding: 11px 22px;
+  }
+  .tl-title{ font-size: 21px; }
+  .tl-desc{ font-size: 16px; }
+
+  /* Table */
+  .table{ font-size: 15px; }
+  .table thead th,
+  .table td{ padding: 13px 13px; }
+
+  /* Apply */
+  .apply-section .section-head h2{ font-size: 36px; }
+  .apply-section .section-head p{ font-size: 16px; }
+  .apply-row dt,
+  .apply-row dd{ font-size: 16px; }
+
+  /* Benefit */
+  .benefit-card{ min-height: 190px; }
+  .benefit-text h3{ font-size: 20px; }
+  .benefit-text p{ font-size: 15px; }
+  .benefit-icon{ width: 96px; height: 96px; }
+
+  /* FAQ */
+  .faq-item summary{ font-size: 17px; }
+  .faq-item p{ font-size: 15px; }
+
+  /* Footer */
+  .footer-inner{ font-size: 14px; }
 }
