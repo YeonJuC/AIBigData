@@ -308,13 +308,14 @@ button{ font: inherit; }
 .section-soft{ background: var(--soft); }
 
 .section-head h2{
-  margin: 0 0 8px;
+  margin: 0px;
   font-size: 44px;
   font-weight: 900;
   letter-spacing: -0.02em;
 }
 .section-head p{
-  margin: 0 0 24px;
+  margin-top: -5px;
+  margin-bottom: 20px;
   color: var(--muted);
   font-size: 21px;
   font-weight: 700;
@@ -667,8 +668,8 @@ button{ font: inherit; }
 .section{ padding: 48px 0; }
 .section-soft{ background:#f4f7ff; }
 
-.section-head h2{ font-size:28px; font-weight:800; }
-.section-head p{ margin-bottom: 20px; margin-top: -5px; color:#64748b; font-weight:600; }
+.section-head h2{ margin-bottom: 0px; font-size:28px; font-weight:800; }
+.section-head p{ margin-top: -5px; margin-bottom: 20px; color:#64748b; font-weight:600; }
 
 .panel{
   background:#fff;
@@ -815,8 +816,8 @@ button{ font: inherit; }
 @media (min-width: 1025px){
   body{ font-size: 17px; line-height: 1.58; }
 
-  .section-head h2{ font-size: 42px; }
-  .section-head p{ font-size: 20px; }
+  .section-head h2{ font-size: 42px; margin-bottom: 0px;}
+  .section-head p{ font-size: 20px; margin-top: -5px; margin-bottom: 20px;}
 
   .hero-desc{ font-size: 20px; }
 
