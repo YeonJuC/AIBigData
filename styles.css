@@ -664,6 +664,112 @@ button{ font: inherit; }
   font-size: 15px;
 }
 
+.section{ padding: 48px 0; }
+.section-soft{ background:#f4f7ff; }
+
+.section-head h2{ margin:0 0 6px; font-size:28px; font-weight:800; }
+.section-head p{ margin:0; color:#64748b; font-weight:600; }
+
+.panel{
+  background:#fff;
+  border: 1px solid rgba(15,23,42,.10);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 12px 30px rgba(15,23,42,.06);
+}
+.panel-wide{ padding: 26px; }
+.panel-soft{
+  background:#f6f8ff;
+  border: none;
+}
+
+.panel-top{
+  display:flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+.panel-title{ margin:0; font-size:18px; font-weight:800; }
+.panel-sub{ margin:8px 0 0; color:#64748b; font-size:13px; font-weight:600; }
+
+.select{
+  border:1px solid rgba(15,23,42,.14);
+  border-radius: 10px;
+  padding: 8px 10px;
+  background:#fff;
+}
+
+.divider{
+  height: 1px;
+  background: rgba(15,23,42,.10);
+  margin: 20px 0;
+}
+
+.table-wrap{ overflow:auto; }
+.table{
+  width:100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  min-width: 820px;
+}
+.table th, .table td{
+  border:1px solid rgba(15,23,42,.12);
+  padding: 12px 12px;
+  font-size: 13px;
+  vertical-align: middle;
+  background:#fff;
+}
+.table thead th{
+  background:#eef2ff;
+  font-weight: 800;
+  color:#0f172a;
+}
+.table td strong{ font-weight:800; }
+
+.table-simple{ min-width: 760px; }
+
+.btn-sm{ padding: 10px 14px; border-radius: 12px; font-size: 13px; }
+
+.muted{ color:#64748b; }
+
+.place-map{
+  position: relative;
+  margin-top: 14px;
+  border-radius: 18px;
+  overflow:hidden;
+  background:#f6f8ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 18px;
+}
+.place-map img{ width: 100%; max-width: 760px; height:auto; display:block; }
+
+.place-btn{
+  position:absolute;
+  left: 50%;
+  bottom: 18px;
+  transform: translateX(-50%);
+}
+
+.faq-item{
+  border: 1px solid rgba(15,23,42,.10);
+  border-radius: 14px;
+  padding: 14px 16px;
+  background:#fff;
+  margin-bottom: 12px;
+}
+.faq-item summary{
+  cursor:pointer;
+  font-weight:800;
+}
+.faq-body{
+  margin-top: 10px;
+  color:#334155;
+  line-height: 1.6;
+}
+
+
 /* =========================================================
    Responsive (레이아웃)
    ========================================================= */
