@@ -35,6 +35,9 @@ button{ font: inherit; }
 }
 
 /* Header */
+/* 고정 헤더 높이가 80px 정도라고 가정 */
+#top { scroll-margin-top: 90px; }
+
 .site-header{
   position: sticky;
   top: 0;
