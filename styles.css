@@ -743,7 +743,7 @@ button{ font: inherit; }
   justify-content:center;
   padding: 18px;
 }
-.place-map img{ width: 80%; max-width: 760px; height:auto; display:block; }
+.place-map img{ width: 800px; height:auto; display:block; }
 
 .place-btn{
   position:absolute;
