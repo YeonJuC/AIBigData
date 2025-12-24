@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FAQ | 포스코 AI · BigData 교육과정</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">POSCO</span></a>
+
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav-link" href="index.html#about">과정소개</a>
+        <a class="nav-link" href="schedule.html">교육일정</a>
+        <a class="nav-link" href="location.html">교육장소</a>
+        <a class="nav-link" href="apply.html">지원하기</a>
+        <a class="nav-link is-active" href="faq.html">FAQ</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" type="button">교육/대면안내</button>
+        <button class="btn btn-solid" type="button">로그인/마이페이지</button>
+        <button class="icon-btn" id="menuBtn" aria-label="모바일 메뉴 열기">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="drawer" hidden>
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="모바일 메뉴">
+        <div class="drawer-top">
+          <span class="drawer-title">메뉴</span>
+          <button class="icon-btn" id="closeDrawer" aria-label="모바일 메뉴 닫기">✕</button>
+        </div>
+        <a class="drawer-link" href="index.html#about">과정소개</a>
+        <a class="drawer-link" href="schedule.html">교육일정</a>
+        <a class="drawer-link" href="location.html">교육장소</a>
+        <a class="drawer-link" href="apply.html">지원하기</a>
+        <a class="drawer-link" href="faq.html">FAQ</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-slider" aria-hidden="true">
+      <div class="hero-slide is-active" style="background-image:url('./assets/hero.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./assets/hero2.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./assets/hero3.jpg')"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>FAQ<br /><span class="hero-strong">자주 묻는 질문</span></h1>
+        <p class="hero-desc">지원/교육/운영 관련 안내를 확인하세요.</p>
+
+        <div class="hero-dots" aria-label="슬라이드 인디케이터">
+          <button class="dot is-active" type="button" aria-label="슬라이드 1"></button>
+          <button class="dot" type="button" aria-label="슬라이드 2"></button>
+          <button class="dot" type="button" aria-label="슬라이드 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-head">
+          <h2>FAQ</h2>
+          <p>가장 많이 문의 주시는 질문을 모았습니다.</p>
+        </div>
+
+        <div class="panel panel-wide">
+          <details class="faq-item" open>
+            <summary>Q. 지원 자격은 어떻게 되나요?</summary>
+            <div class="faq-body">A. 모집 공고 기준의 학력/참여 조건을 확인해 주세요.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Q. 교육은 온라인/오프라인인가요?</summary>
+            <div class="faq-body">A. 과정 운영 기준에 따라 대면/비대면이 병행될 수 있습니다.</div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Q. 수당 및 혜택은 어떻게 제공되나요?</summary>
+            <div class="faq-body">A. 교육수당/식비 등은 운영 기준에 따라 제공됩니다.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./main.js"></script>
+</body>
+</html>
