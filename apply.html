@@ -3,39 +3,145 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <title>지원하기 | AI·BigData</title>
+  <title>지원하기 | 포스코 AI · BigData 교육과정</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
-  <header class="header">
+  <header class="site-header">
     <div class="container header-inner">
-      <a class="logo" href="index.html">POSCO</a>
-      <nav class="nav">
-        <a href="index.html#about">과정소개</a>
-        <a href="schedule.html">교육일정</a>
-        <a href="location.html">교육장소</a>
-        <a class="is-active" href="apply.html">지원하기</a>
-        <a href="index.html#faq">FAQ</a>
+      <a class="brand" href="index.html"><span class="brand-mark">POSCO</span></a>
+
+      <nav class="nav" aria-label="주요 메뉴">
+        <a class="nav-link" href="index.html#about">과정소개</a>
+        <a class="nav-link" href="schedule.html">교육일정</a>
+        <a class="nav-link" href="location.html">교육장소</a>
+        <a class="nav-link is-active" href="apply.html">지원하기</a>
+        <a class="nav-link" href="faq.html">FAQ</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-ghost" type="button">교육/대면안내</button>
+        <button class="btn btn-solid" type="button">로그인/마이페이지</button>
+        <button class="icon-btn" id="menuBtn" aria-label="모바일 메뉴 열기">☰</button>
+      </div>
+    </div>
+
+    <div class="mobile-drawer" id="drawer" hidden>
+      <div class="drawer-backdrop" id="drawerBackdrop"></div>
+      <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="모바일 메뉴">
+        <div class="drawer-top">
+          <span class="drawer-title">메뉴</span>
+          <button class="icon-btn" id="closeDrawer" aria-label="모바일 메뉴 닫기">✕</button>
+        </div>
+        <a class="drawer-link" href="index.html#about">과정소개</a>
+        <a class="drawer-link" href="schedule.html">교육일정</a>
+        <a class="drawer-link" href="location.html">교육장소</a>
+        <a class="drawer-link" href="apply.html">지원하기</a>
+        <a class="drawer-link" href="faq.html">FAQ</a>
+      </div>
     </div>
   </header>
 
+  <section class="hero">
+    <div class="hero-slider" aria-hidden="true">
+      <div class="hero-slide is-active" style="background-image:url('./assets/hero.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./assets/hero2.jpg')"></div>
+      <div class="hero-slide" style="background-image:url('./assets/hero3.jpg')"></div>
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="container hero-inner">
+      <div class="hero-copy">
+        <h1>AI · BigData<br /><span class="hero-strong">실무역량을 프로젝트로 완성</span></h1>
+        <p class="hero-desc">모집 차수 확인 후 지원해 주세요.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#apply-table">지원하러 가기</a>
+          <a class="btn btn-outline" href="schedule.html">교육일정 보기</a>
+        </div>
+
+        <div class="hero-dots" aria-label="슬라이드 인디케이터">
+          <button class="dot is-active" type="button" aria-label="슬라이드 1"></button>
+          <button class="dot" type="button" aria-label="슬라이드 2"></button>
+          <button class="dot" type="button" aria-label="슬라이드 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <main>
-    <section class="section section-soft">
+    <section class="section section-soft" id="apply">
       <div class="container">
         <div class="section-head">
           <h2>지원하기</h2>
-          <p>모집 차수 확인 후 지원해 주세요.</p>
+          <p>마감일정은 차수별 상이할 수 있습니다. (마감일을 제외한 모집기간 중에는 24시간 신청 가능)</p>
         </div>
 
-        <!-- ✅ 여기 기존 index의 지원하기 섹션 내용 그대로 옮기면 됨 -->
-        <div class="panel">
-          <!-- apply table / 버튼 -->
+        <div class="panel panel-wide" id="apply-table">
+          <div class="table-wrap">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th style="width:110px;">구분</th>
+                  <th>교육과정명</th>
+                  <th style="width:140px;">교육일정</th>
+                  <th style="width:140px;">교육장소</th>
+                  <th style="width:120px;">지원</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>포항</td>
+                  <td>
+                    <strong>청년 AI·BigData 아카데미 32기</strong><br/>
+                    <span class="muted">모집: 2026.00.00 ~ 00.00 18시</span>
+                  </td>
+                  <td>2026.00.00</td>
+                  <td>2026.00.00</td>
+                  <td><a class="btn btn-primary btn-sm" href="#">신청하기</a></td>
+                </tr>
+                <tr>
+                  <td>포항</td>
+                  <td>
+                    <strong>청년 AI·BigData 아카데미 33기</strong><br/>
+                    <span class="muted">모집: 2026.00.00 ~ 00.00 18시</span>
+                  </td>
+                  <td>2026.00.00</td>
+                  <td>2026.00.00</td>
+                  <td><a class="btn btn-primary btn-sm" href="#">신청하기</a></td>
+                </tr>
+                <tr>
+                  <td>포항</td>
+                  <td>
+                    <strong>청년 AI·BigData 아카데미 34기</strong><br/>
+                    <span class="muted">모집: 2026.00.00 ~ 00.00 18시</span>
+                  </td>
+                  <td>2026.00.00</td>
+                  <td>2026.00.00</td>
+                  <td><a class="btn btn-primary btn-sm" href="#">신청하기</a></td>
+                </tr>
+                <tr>
+                  <td>포항</td>
+                  <td>
+                    <strong>청년 AI·BigData 아카데미 35기</strong><br/>
+                    <span class="muted">모집: 2026.00.00 ~ 00.00 18시</span>
+                  </td>
+                  <td>2026.00.00</td>
+                  <td>2026.00.00</td>
+                  <td><a class="btn btn-primary btn-sm" href="#">신청하기</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
+
       </div>
     </section>
   </main>
 
-  <script src="./js/main.js"></script>
+  <script src="./main.js"></script>
 </body>
 </html>
