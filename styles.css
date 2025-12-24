@@ -516,7 +516,7 @@ button{ font: inherit; }
 
 /* ===== Apply Section ===== */
 .apply-section .section-head h2{
-  margin: 0 0 8px;
+  margin: 0px;
   font-size: 40px;
   font-weight: 900;
   letter-spacing: -0.02em;
