@@ -230,6 +230,10 @@ button{ font: inherit; }
   margin-bottom: 26px;
 }
 
+.page-toplift{
+  margin-top: -56px;   /* hero 아래 카드가 위로 올라오게 */
+}
+
 .btn-primary{
   background: linear-gradient(110deg, var(--primary) 0%, var(--primary2) 100%);
   color: #fff;
