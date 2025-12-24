@@ -768,6 +768,26 @@ button{ font: inherit; }
   color:#334155;
   line-height: 1.6;
 }
+/* 페이지 상단 타이틀 영역 */
+.page-head{
+  margin-bottom: 12px;   /* ⬅ 전체 블록 간격은 살짝만 */
+}
+
+/* "교육일정" 큰 제목 */
+.page-title{
+  margin-bottom: 6px;    /* ⬅ 제목과 설명 간격 줄이기 */
+}
+
+/* 설명 문구 */
+.page-sub{
+  margin-top: 0;
+  margin-bottom: 32px;  /* ⬅ 설명과 흰 박스 간격 늘리기 */
+}
+
+/* 흰 박스(카드/섹션) 시작 부분 */
+.block:first-of-type{
+  margin-top: 0;        /* 불필요한 위 여백 제거 */
+}
 
 
 /* =========================================================
