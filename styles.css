@@ -812,7 +812,8 @@ button{ font: inherit; }
 }
 
 .map-btn {
-  margin-top: 24px;   /* 지도랑 간격 */
+  margin-top: 0px;
+  margin-bottom: 32px;
   padding: 14px 32px;
   border-radius: 999px;
   font-size: 16px;
