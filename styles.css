@@ -753,11 +753,8 @@ button{ font: inherit; }
 }
 .place-map img{ width: 800px; height:auto; display:block; }
 
-.place-btn{
-  position:absolute;
-  left: 50%;
-  bottom: 18px;
-  transform: translateX(-50%);
+.place-btn {
+  display: inline-block;
   margin-top: 24px;
 }
 
