@@ -731,6 +731,8 @@ button{ font: inherit; }
   background:#eef2ff;
   font-weight: 800;
   color:#0f172a;
+  text-align: center;   /* 가로 중앙 */
+  vertical-align: middle; /* 세로 중앙 (안전용) */
 }
 .table td strong{ font-weight:800; }
 
