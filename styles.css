@@ -799,6 +799,25 @@ button{ font: inherit; }
   color: #555;
 }
 
+.map-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 가로 중앙 */
+}
+
+.map-image {
+  width: 100%;
+  max-width: 900px; /* 필요 시 */
+  border-radius: 16px;
+}
+
+.map-btn {
+  margin-top: 24px;   /* 지도랑 간격 */
+  padding: 14px 32px;
+  border-radius: 999px;
+  font-size: 16px;
+}
+
 .faq-item{
   border: 1px solid rgba(15,23,42,.10);
   border-radius: 14px;
