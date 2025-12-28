@@ -758,6 +758,7 @@ button{ font: inherit; }
   left: 50%;
   bottom: 18px;
   transform: translateX(-50%);
+  margin-top: 24px;
 }
 
 .faq-item{
