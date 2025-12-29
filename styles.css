@@ -845,7 +845,7 @@ button{ font: inherit; }
 /* =========================================================
    Responsive (레이아웃)
    ========================================================= */
-@media (max-width: 980px){
+@media@media (max-width: 980px){
   .nav{ display:none; }
   .icon-btn{ display: inline-flex; align-items:center; justify-content:center; }
 
@@ -854,6 +854,75 @@ button{ font: inherit; }
   .benefit-grid{ grid-template-columns: repeat(2, 1fr); }
 
   .tl-row{ grid-template-columns: 120px 1fr; }
+}
+
+/* =========================================================
+   ✅ 모바일 메뉴 추가 (필수)
+   - .nav는 숨기고, 햄버거 클릭 시 .mobile-nav를 열어서 메뉴 보여줌
+   ========================================================= */
+
+/* 기본: PC에서는 모바일 메뉴 숨김 */
+.mobile-nav{ display:none; }
+
+@media (max-width: 980px){
+
+  /* 모바일에서 헤더가 히어로 이미지에 묻히는 것 방지 */
+  header{
+    position: sticky;
+    top: 0;
+    z-index: 10000;
+    background: rgba(15,23,42,.72);
+    backdrop-filter: blur(10px);
+  }
+
+  /* 모바일 메뉴 패널 */
+  .mobile-nav{
+    display: block;
+    position: fixed;
+    left: 12px;
+    right: 12px;
+    top: 68px;                 /* 헤더 높이에 맞게 60~76 사이로 조절 */
+    z-index: 11000;
+
+    background: rgba(15,23,42,.92);
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    padding: 10px;
+
+    box-shadow: 0 18px 40px rgba(0,0,0,.18);
+
+    /* 닫힘 상태 */
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: .18s ease;
+  }
+
+  /* 열림 상태 */
+  .mobile-nav.is-open{
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .mobile-nav a{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+    padding: 12px 12px;
+    border-radius: 12px;
+    font-weight: 700;
+  }
+
+  .mobile-nav a + a{
+    margin-top: 6px;
+  }
+
+  .mobile-nav a:active{
+    background: rgba(255,255,255,.08);
+  }
 }
 
 /* (사용 안 하면 숨김) */
