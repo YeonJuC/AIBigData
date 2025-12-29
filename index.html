@@ -19,22 +19,12 @@
       </a>
 
       <nav class="nav" aria-label="주요 메뉴">
-        <a class="nav-link is-active" href="index.html#about">과정소개</a>
-        <a class="nav-link" href="schedule.html#top">교육일정</a>
-        <a class="nav-link" href="location.html#top">교육장소</a>
-        <a class="nav-link" href="apply.html#top">지원하기</a>
-        <a class="nav-link" href="faq.html#top">FAQ</a>
+        <a class="drawer-link" href="index.html#about">과정소개</a>
+        <a class="drawer-link" href="schedule.html#top">교육일정</a>
+        <a class="drawer-link" href="location.html#top">교육장소</a>
+        <a class="drawer-link" href="apply.html#top">지원하기</a>
+        <a class="drawer-link" href="faq.html#top">FAQ</a>
       </nav>
-
-      <!-- ✅ 모바일 전용 메뉴(추가) -->
-      <nav class="mobile-nav" id="mobileNav" aria-label="모바일 메뉴">
-        <a href="index.html#about">과정소개</a>
-        <a href="schedule.html#top">교육일정</a>
-        <a href="location.html#top">교육장소</a>
-        <a href="apply.html#top">지원하기</a>
-        <a href="faq.html#top">FAQ</a>
-      </nav>
-
 
       <div class="header-actions">
         <button class="btn btn-ghost" type="button"> 지원현황조회 및 수정 </button>
@@ -324,5 +314,17 @@
   </footer>
 
   <script src="./app.js"></script>
+  <button class="icon-btn" id="menuBtn" aria-label="메뉴" aria-expanded="false">☰</button>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const nav = document.getElementById('mobileNav');
+  
+    btn.addEventListener('click', () => {
+      const open = nav.classList.toggle('is-open');
+      btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    });
+  </script>
+
 </body>
 </html>
