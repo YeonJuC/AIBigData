@@ -977,33 +977,44 @@ button{ font: inherit; }
 .curr-item li { margin: 2px 0; }
 
 /* ===== Module Header (OUTSIDE CARD) ===== */
-.module-head-out {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 14px;
+.module-head-out{
+  display:flex;
+  align-items:flex-start;   /* ✅ pill이 위로 붙게 */
+  gap:16px;
+  margin: 8px 0 14px;
 }
 
-.module-pill {
-  background: #1d4ed8;
-  color: #fff;
-  font-weight: 800;
-  font-size: 13px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  white-space: nowrap;
+.module-meta{
+  display:flex;
+  flex-direction:column;    /* ✅ BigData 아래로 설명 쌓기 */
+  gap:6px;
+  min-width:0;
 }
 
-.module-title {
-  margin: 0;
-  font-size: 22px;
-  font-weight: 900;
+.module-title{
+  margin:0;
+  font-size:22px;
+  font-weight:900;
+  line-height:1.2;
 }
 
-.module-desc {
-  margin: 0 0 0 8px;
-  font-size: 14px;
-  color: #475569;
+.module-desc{
+  margin:0;                 /* ✅ 옆으로 밀지 말고 아래로 */
+  font-size:14px;
+  color:#475569;
+  line-height:1.5;
+}
+
+/* pill은 그대로 쓰되 높이만 자연스럽게 */
+.module-pill{
+  margin-top:2px;           /* 옵션: 제목 라인과 수평 맞추기 */
+  background:#1d4ed8;
+  color:#fff;
+  font-weight:800;
+  font-size:13px;
+  padding:6px 12px;
+  border-radius:999px;
+  white-space:nowrap;
 }
 
 /* ===== Module Table Card ===== */
