@@ -892,7 +892,7 @@ button{ font: inherit; }
 }
 
 .tl-left { padding-top: 6px; }
-.tl-check-img { width: 28px; height: 28px; }
+.tl-check-img { width: 28px; height: 28px; right:5px; }
 
 .tl-right { display: grid; gap: 12px; }
 
