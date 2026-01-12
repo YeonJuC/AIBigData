@@ -421,6 +421,7 @@ button{ font: inherit; }
   position: relative;
   z-index: 4;
   top: 7px;
+  right: 5px;
 }
 
 .tl-content{
