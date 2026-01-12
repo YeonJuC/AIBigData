@@ -844,6 +844,147 @@ button{ font: inherit; }
 
 .mobile-drawer{ display:none; }
 
+/* ===== 공통 ===== */
+.section-head .subhead {
+  margin: 0 0 16px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+/* ===== 핵심 포인트 카드 ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.info-card {
+  position: relative;
+  padding: 18px 18px 16px;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 14px;
+}
+
+.info-card .badge {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  background: #1d4ed8;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+/* ===== 타임라인 영역 ===== */
+.timeline { display: grid; gap: 18px; }
+
+.tl-row {
+  display: grid;
+  grid-template-columns: 44px 1fr;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.tl-left { padding-top: 6px; }
+.tl-check-img { width: 28px; height: 28px; }
+
+.tl-right { display: grid; gap: 12px; }
+
+.tl-week { font-size: 13px; font-weight: 700; color: #2563eb; }
+.tl-title { margin: 4px 0 6px; font-size: 18px; font-weight: 800; }
+.tl-desc { margin: 0; color: #374151; }
+
+/* ===== Module Table ===== */
+.module-table {
+  border: 1px solid #e5e7eb;
+  background: #fff;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.module-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 14px 16px;
+  background: #f8fafc;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.module-pill {
+  background: #1d4ed8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.module-title h4 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.module-title p {
+  margin: 3px 0 0;
+  font-size: 13px;
+  color: #475569;
+}
+
+/* 테이블 */
+.curr-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.curr-table thead th {
+  background: #94a3b8;
+  color: #fff;
+  font-weight: 800;
+  text-align: center;
+  padding: 12px 10px;
+  font-size: 14px;
+}
+
+.curr-table td {
+  border-top: 1px solid #e5e7eb;
+  border-right: 1px solid #e5e7eb;
+  padding: 14px 12px;
+  vertical-align: top;
+  font-size: 14px;
+}
+
+.curr-table td:last-child { border-right: 0; }
+
+.col-days {
+  width: 110px;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 800;
+}
+
+.curr-cell { display: grid; gap: 12px; }
+.curr-item strong { display: block; font-weight: 900; margin-bottom: 6px; }
+.curr-item ul { margin: 0; padding-left: 18px; color: #374151; }
+.curr-item li { margin: 2px 0; }
+
+/* ===== 반응형 ===== */
+@media (max-width: 920px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .tl-row { grid-template-columns: 36px 1fr; }
+  .col-days { width: 88px; }
+  .curr-table thead th { font-size: 13px; }
+  .curr-table td { font-size: 13px; }
+}
+
+
 @media (max-width: 980px){
   .mobile-drawer{ display:block; }
 }
