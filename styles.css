@@ -975,6 +975,45 @@ button{ font: inherit; }
 .curr-item ul { margin: 0; padding-left: 18px; color: #374151; }
 .curr-item li { margin: 2px 0; }
 
+/* ===== Module Header (OUTSIDE CARD) ===== */
+.module-head-out {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.module-pill {
+  background: #1d4ed8;
+  color: #fff;
+  font-weight: 800;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.module-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+.module-desc {
+  margin: 0 0 0 8px;
+  font-size: 14px;
+  color: #475569;
+}
+
+/* ===== Module Table Card ===== */
+.module-table {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+
 /* ===== 반응형 ===== */
 @media (max-width: 920px) {
   .card-grid { grid-template-columns: 1fr; }
