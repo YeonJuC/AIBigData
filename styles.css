@@ -827,7 +827,6 @@ button{ font: inherit; }
   border-radius: 14px;
   padding: 14px 16px;
   background:#fff;
-  margin-bottom: 12px;
 }
 .faq-item summary{
   cursor:pointer;
