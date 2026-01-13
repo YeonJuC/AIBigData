@@ -1024,6 +1024,93 @@ button{ font: inherit; }
   overflow: hidden;
 }
 
+/* =========================
+   Pre-learning guide
+========================= */
+#prelearning .prelearning-note {
+  margin-top: 8px;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+#prelearning .prelearning-foot {
+  margin-top: 12px;
+  font-size: 14px;
+  opacity: 0.75;
+}
+
+/* 표 래퍼 */
+.prelearning-tableWrap {
+  margin-top: 18px;
+  overflow-x: auto;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.72);
+}
+
+.prelearning-tableWrap:focus {
+  outline: 3px solid rgba(0, 0, 0, 0.22);
+  outline-offset: 3px;
+}
+
+/* 표 */
+.prelearning-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 860px; /* 모바일에서 가로 스크롤 */
+}
+
+.prelearning-table thead th {
+  text-align: center;
+  font-weight: 700;
+  padding: 16px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.prelearning-table td,
+.prelearning-table tbody th {
+  vertical-align: top;
+  padding: 14px 14px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.prelearning-table td:last-child,
+.prelearning-table thead th:last-child {
+  border-right: none;
+}
+
+.prelearning-table tr:last-child td,
+.prelearning-table tr:last-child th {
+  border-bottom: none;
+}
+
+/* 왼쪽 구분 셀 */
+.prelearning-table .rowgroup {
+  text-align: center;
+  font-weight: 700;
+  white-space: nowrap;
+  width: 140px;
+}
+
+/* 링크/리스트 */
+#prelearning a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.method-list {
+  margin: 0;
+  padding-left: 18px;
+  display: grid;
+  gap: 8px;
+}
+
+.method-list li {
+  line-height: 1.55;
+}
+
 
 /* ===== 반응형 ===== */
 @media (max-width: 920px) {
